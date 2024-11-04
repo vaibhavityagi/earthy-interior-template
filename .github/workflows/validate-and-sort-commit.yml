@@ -47,32 +47,3 @@ jobs:
           # Use the GitHub PAT to set the remote URL
           git remote set-url origin https://${{ secrets.GI_TOKEN }}:x-oauth-basic@github.com/mukuldualite/amartesh.git
           echo "Git remote URL set with PAT."
-
-      - name: Cherry-pick to Fixes and Features Branches
-        run: |
-          set -e  # Stop execution on error
-          COMMIT_HASH=${{ env.commit_hash }}
-          TARGET_BRANCHES=("fixes" "features")
-
-          for TARGET_BRANCH in "${TARGET_BRANCHES[@]}"; do
-            echo "Attempting to cherry-pick commit $COMMIT_HASH to $TARGET_BRANCH"
-            
-            # Check if the branch exists, if not create it from main
-            if ! git rev-parse --verify "$TARGET_BRANCH" >/dev/null 2>&1; then
-              echo "$TARGET_BRANCH does not exist. Creating it from main."
-              git checkout -b "$TARGET_BRANCH" origin/main
-              git push origin "$TARGET_BRANCH" || { echo "Failed to push $TARGET_BRANCH"; exit 1; }
-            else
-              git checkout "$TARGET_BRANCH"
-            fi
-
-            # Attempt cherry-pick
-            if ! git cherry-pick "$COMMIT_HASH"; then
-              echo "::error ::Conflict detected during cherry-pick to $TARGET_BRANCH. Aborting."
-              git cherry-pick --abort
-              exit 1
-            fi
-
-            # Push the changes using the PAT
-            git push origin "$TARGET_BRANCH" || { echo "Failed to push changes to $TARGET_BRANCH"; exit 1; }
-          done
