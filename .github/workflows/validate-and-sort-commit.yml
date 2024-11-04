@@ -49,7 +49,7 @@ jobs:
               done
               
               # Push to the branch on GitHub using the PAT
-              git push "https://${TOKEN}@${REPO_URL}" "$branch"
+              git push "https://${TOKEN}@${REPO_URL#https://}" "$branch"
             fi
           done
       - name: Push changes
@@ -57,4 +57,4 @@ jobs:
           REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
           TOKEN: ${{ secrets.GI_TOKEN }}
         run: |
-            git push "https://${TOKEN}@${REPO_URL}" --all
+            git push "https://${TOKEN}@${REPO_URL#https://}" --all
