@@ -1,0 +1,78 @@
+name: Validate and Cherry-Pick
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-and-cherry-pick:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for all branches
+
+      - name: Validate Commit Message
+        id: validate_commit
+        run: |
+          set -e  # Stop execution on error
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MSG"
+
+          # Define the keywords
+          KEYWORDS=("fixed:" "polished:" "ready:" "misc:" "generated:")
+
+          # Check if the commit message starts with any of the keywords
+          if [[ ! " ${KEYWORDS[@]} " =~ " ${COMMIT_MSG:0:${#KEYWORDS[0]}} " ]] &&
+             [[ ! " ${KEYWORDS[@]} " =~ " ${COMMIT_MSG:0:${#KEYWORDS[1]}} " ]] &&
+             [[ ! " ${KEYWORDS[@]} " =~ " ${COMMIT_MSG:0:${#KEYWORDS[2]}} " ]] &&
+             [[ ! " ${KEYWORDS[@]} " =~ " ${COMMIT_MSG:0:${#KEYWORDS[3]}} " ]] &&
+             [[ ! " ${KEYWORDS[@]} " =~ " ${COMMIT_MSG:0:${#KEYWORDS[4]}} " ]]; then
+            echo "Error: Commit message should start with 'fixed:', 'polished:', 'ready:', 'misc:', or 'generated:'."
+            exit 1
+          fi
+
+      - name: Get Commit Hash
+        id: commit_hash
+        run: |
+          set -e  # Stop execution on error
+          echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      - name: Setup Git Remote with PAT
+        run: |
+          set -e  # Stop execution on error
+          # Use the GitHub PAT to set the remote URL
+          git remote set-url origin https://${{ secrets.GI_TOKEN }}:x-oauth-basic@github.com/Mukul1312/codewave-demo.git
+          echo "Git remote URL set with PAT."
+
+      - name: Cherry-pick to Fixes and Features Branches
+        run: |
+          set -e  # Stop execution on error
+          COMMIT_HASH=${{ env.commit_hash }}
+          TARGET_BRANCHES=("fixes" "features")
+
+          for TARGET_BRANCH in "${TARGET_BRANCHES[@]}"; do
+            echo "Attempting to cherry-pick commit $COMMIT_HASH to $TARGET_BRANCH"
+            
+            # Check if the branch exists, if not create it from main
+            if ! git rev-parse --verify "$TARGET_BRANCH" >/dev/null 2>&1; then
+              echo "$TARGET_BRANCH does not exist. Creating it from main."
+              git checkout -b "$TARGET_BRANCH" origin/main
+              git push origin "$TARGET_BRANCH" || { echo "Failed to push $TARGET_BRANCH"; exit 1; }
+            else
+              git checkout "$TARGET_BRANCH"
+            fi
+
+            # Attempt cherry-pick
+            if ! git cherry-pick "$COMMIT_HASH"; then
+              echo "::error ::Conflict detected during cherry-pick to $TARGET_BRANCH. Aborting."
+              git cherry-pick --abort
+              exit 1
+            fi
+
+            # Push the changes using the PAT
+            git push origin "$TARGET_BRANCH" || { echo "Failed to push changes to $TARGET_BRANCH"; exit 1; }
+          done
