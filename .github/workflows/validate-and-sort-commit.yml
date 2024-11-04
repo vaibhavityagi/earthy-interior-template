@@ -52,4 +52,9 @@ jobs:
               git push "https://${TOKEN}@${REPO_URL#https://}" "$branch"
             fi
           done
-
+          - name: Push changes
+          env:
+            REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
+            TOKEN: ${{ secrets.GI_TOKEN_TOKEN }}
+          run: |
+            git push "https://${TOKEN}@${REPO_URL#https://}" --all
