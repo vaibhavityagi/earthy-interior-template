@@ -21,6 +21,9 @@ jobs:
       - name: Fetch all branches
         run: |
           git fetch --all
+      - name: Print GI_TOKE
+        run: |
+          echo ${{ secrets.GI_TOKEN }}
 
       - name: Filter and Cherry-Pick Commits
         env:
