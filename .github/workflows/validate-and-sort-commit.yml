@@ -25,7 +25,7 @@ jobs:
       - name: Filter and Cherry-Pick Commits
         env:
           REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
-          TOKEN: ${{ secrets.PAT_TOKEN }}
+          TOKEN: ${{ secrets.GI_TOKEN }}
         run: |
           # Define prefixes and corresponding branch names
           prefixes=("fixed" "polished" "ready" "misc" "generated")
