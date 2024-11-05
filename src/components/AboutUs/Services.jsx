@@ -30,7 +30,7 @@ const Services = () => {
               <img src={image1} className="w-[48px] h-[48px]" />
             </div>
             <div className="flex gap-[16px] w-[85.67%] flex-col ">
-              <div className="font-raleway text-[32px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
+              <div className="font-raleway text-[32px] max-842px:text-[24px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
                 Architectural & Interior design
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">
@@ -44,7 +44,7 @@ const Services = () => {
               <img src={image2} className="w-[48px] h-[48px]" />
             </div>
             <div className="flex  gap-[16px] w-[85.67%] flex-col ">
-              <div className="font-raleway text-[32px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
+              <div className="font-raleway text-[32px] max-842px:text-[24px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
                 Building Renovation
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">
@@ -57,8 +57,8 @@ const Services = () => {
             <div className="flex w-[85.67%]  ">
               <img src={image3} className="w-[48px] h-[48px]" />
             </div>
-            <div className="flex gap-[16px] w-[85.67%] flex-col ">
-              <div className="font-raleway text-[32px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
+            <div className="flex gap-[16px] w-[85.67%] flex-col  ">
+              <div className="font-raleway text-[32px] max-842px:text-[24px] max-md:text-[16px] max-md:leading-[28.8px] font-bold text-[#214A3E] leading-[48px]">
                 Construction Management
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">

@@ -14,7 +14,7 @@ const Benefits = () => {
       <div className="w-[50%] max-md:w-[100%] ">
         <div className=" flex h-[50%] max-sm:flex-col-reverse  ">
           <div className="w-[50%] max-sm:w-[100%] max-sm:h-[50%] h-[100%] bg-[#FAFAFA] items-center flex flex-col justify-center">
-          <div className="flex gap-[20px] max-md:gap-[28px] flex-col justify-between  w-[69.13%] ">
+          <div className=" flex gap-[20px] max-md:gap-[28px] flex-col justify-between  w-[69.13%] ">
               <img src={benefits1} className="w-[76px] h-[80px]" />
               <div className="font-raleway text-[24px] max-sm:text-[16px] font-bold text-[#285A43] leading-[140%]">
                 Quality Product
@@ -25,7 +25,7 @@ const Benefits = () => {
             </div>
           </div>
           <div className="w-[50%] max-sm:w-[100%] max-sm:h-[50%] h-[100%] bg-[#E5EDE4] items-center flex flex-col justify-center">
-          <div className="flex gap-[20px] max-md:gap-[10px] flex-col justify-between  w-[69.13%]">
+          <div className="flex gap-[20px] max-zmd:gap-[10px] flex-col justify-between  w-[69.13%]">
               <img src={benefits2} className="w-[119px] h-[83px]" />
               <div className="font-raleway text-[24px] max-sm:text-[16px] font-bold text-[#285A43] leading-[140%]">
                 Breathable & Absorbs CO2

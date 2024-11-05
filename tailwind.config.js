@@ -18,6 +18,7 @@ export default {
       "635px": "635px",
       "1215px": "1215px",
       "967px": "967px",
+      "842px": "842px",
     },
     extend: {
       animation: {

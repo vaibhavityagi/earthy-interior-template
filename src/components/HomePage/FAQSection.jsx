@@ -46,7 +46,7 @@ const FAQSection = () => {
             beatae error laborum.
           </p>
         </div>
-        <div className="max-w-[852px] w-full ">
+        {/* <div className="max-w-[852px] w-full ">
           <ul className="text-[#214A3E]">
             {questions.map((question, index) => (
               <li key={index}>
@@ -68,6 +68,46 @@ const FAQSection = () => {
                     </div>
                   </div>
                   <div>
+                    {activeIndex === index && (
+                      <div className="leading-[28px]">
+                        <p className="text-[#214A3E] font-medium text-[18px] max-sm:text-[12px]">
+                          {question.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div> */}
+
+        <div className="max-w-[852px] w-full">
+          <ul className="text-[#214A3E]">
+            {questions.map((question, index) => (
+              <li key={index}>
+                <div
+                  className={`flex font-raleway justify-between items-left flex-col cursor-pointer border-t border-b border-gray-300 py-[24px] ${
+                    activeIndex === index ? "gap-[20px]" : ""
+                  }`}
+                  onClick={() => handleClick(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-[22px] font-bold w-[796px] max-sm:text-[16px]">
+                      {index + 1}. {question.title}
+                    </h3>
+                    <div>
+                      <img
+                        src={activeIndex === index ? image1 : image}
+                        className=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={`overflow-hidden transition-max-height duration-500 ease-in ${
+                      activeIndex === index ? "max-h-[500px]" : "max-h-0"
+                    }`}
+                  >
                     {activeIndex === index && (
                       <div className="leading-[28px]">
                         <p className="text-[#214A3E] font-medium text-[18px] max-sm:text-[12px]">

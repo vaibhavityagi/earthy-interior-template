@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import image1 from "../../assets/HomePage/Rectangle-15.png";
 import image2 from "../../assets/HomePage/Rectangle-16.png";
 import image3 from "../../assets/HomePage/Rectangle-17.png";
+import trendy from "../../assets/HomePage/trendy.png";
+import aes from "../../assets/HomePage/aes.png";
 
 const Collection = () => {
   const [hovered, setHovered] = useState(null);
@@ -41,14 +43,17 @@ const Collection = () => {
             className={`relative flex-shrink ${
               hovered === "second" || hovered === "third"
                 ? "w-[25%] pl-[10px]"
-                : "w-[50%] h-full "
-            } transform transition-width duration-700 ease-out rounded-[20px] `}
-           
+                : "w-[50%] h-full"
+            } transform transition-width duration-700 ease-out rounded-[20px]`}
+            style={{
+              backgroundImage: `url(${image1})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            <img src={image1} className="w-full h-full" />
             <div
               className={`relative w-[48px]  font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
-                transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] top-[-10%] left-[8%] whitespace-nowrap max-md:left-[15%] max-sm:text-[20px]`}
+                transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] top-[90%] left-[8%] whitespace-nowrap max-md:left-[15%] max-sm:text-[20px]`}
               style={{
                 textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
               }}
@@ -60,14 +65,17 @@ const Collection = () => {
             className={`relative flex-shrink ${
               hovered === "second" ? "w-[50%]" : "w-[25%] h-full"
             } transform transition-width rounded-[20px] duration-700 ease-out`}
+            style={{
+              backgroundImage: `url(${aes})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
             onMouseEnter={() => setHovered("second")}
             onMouseLeave={() => setHovered(null)}
-           
           >
-            <img src={image2} className="w-full h-full" />
             <div
               className={`relative font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
-                transform -translate-x-1/2 w-[48px] -translate-y-1/2 rotate-[-90deg] top-[-10%] left-[12%] whitespace-nowrap max-md:left-[25%]  max-sm:text-[20px]`}
+                transform -translate-x-1/2 w-[48px] -translate-y-1/2 rotate-[-90deg] top-[90%] left-[12%] whitespace-nowrap max-md:left-[25%]  max-sm:text-[20px]`}
               style={{
                 textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
               }}
@@ -79,14 +87,17 @@ const Collection = () => {
             className={`relative flex-shrink ${
               hovered === "third" ? "w-[50%]" : "w-[25%] h-full"
             } transform transition-width rounded-[20px] duration-700 ease-out`}
+            style={{
+              backgroundImage: `url(${trendy})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
             onMouseEnter={() => setHovered("third")}
             onMouseLeave={() => setHovered(null)}
-            
           >
-            <img src={image3} className="w-full h-full" />
             <div
               className={`relative font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
-                transform -translate-x-1/2 w-[48px] -translate-y-1/2 rotate-[-90deg] top-[-10%] left-[12%] max-md:left-[25%] max-sm:text-[20px]`}
+                transform -translate-x-1/2 w-[48px] -translate-y-1/2 rotate-[-90deg] top-[90%] left-[12%] max-md:left-[25%] max-sm:text-[20px]`}
               style={{
                 textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
               }}

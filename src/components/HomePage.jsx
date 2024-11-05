@@ -18,7 +18,7 @@ function HomePage() {
       <Texture />
       <NewArrivalsSection />
       <CraftsSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <ContactUs />
       <FAQSection />
     </div>

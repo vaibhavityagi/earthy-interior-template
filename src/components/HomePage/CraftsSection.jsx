@@ -64,17 +64,14 @@ const CraftsSection = () => {
 
               <div
                 style={{ backgroundImage: `url(${image3})` }}
-                className="relative w-[66%] h-full bg-cover bg-center h-[100%]"
+                className="relative w-[66%] h-full bg-cover bg-center h-[100%] flex justify-center items-center"
                 aria-label="Craft 3"
               >
                 {/* Flex container for centering the button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="max-w-[225px] max-md:text-[15px] max-md:max-w-[167px] max-md:h-[47px] w-full h-[63px] border-white/50 border-2 bg-white/5 text-white text-[20px] rounded-full flex items-center justify-center shadow-lg backdrop-blur-md transition max-635px:h-[33px] max-sm:w-[120px] max-635px:text-[12px] font-raleway">
+                {/* <div className="absolute inset-0 flex items-center justify-center"> */}
+                  <div className="max-md:text-[15px] text-white text-[36px] underline  max-635px:text-[12px] font-raleway">
                     Show More
-                    <span className="w-[57px] max-md:w-[35px] h-[1px] ml-3 bg-white inline-block relative max-sm:w-[28px]">
-                      <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>
-                    </span>
-                  </button>
+                  {/* </div> */}
                 </div>
               </div>
             </div>

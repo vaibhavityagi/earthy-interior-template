@@ -40,11 +40,16 @@ const ContactForm = () => {
                 className="bg-[#F5F8F4] placeholder:font-raleway placeholder:text-[16px] w-full h-[75px] p-3"
               />
               <div className="font-raleway text-[16px]">Message</div>
-              <input
+              {/* <input
                 type="text"
                 placeholder="Hi I'd like to ask about"
-                className="bg-[#F5F8F4] placeholder:font-raleway placeholder:text-[16px] w-full h-[120px] p-3"
+                className="bg-[#F5F8F4] placeholder:font-raleway placeholder:text-[16px] w-full h-[120px] pt-2 pl-3"
+              /> */}
+              <textarea
+                placeholder="Hi I'd like to ask about"
+                className="bg-[#F5F8F4] placeholder:font-raleway placeholder:text-[16px] w-full h-[120px] p-3 resize-none"
               />
+
               {/* </form> */}
             </div>
           </div>
@@ -77,9 +82,9 @@ const ContactForm = () => {
                 </div>
               </div>
               <div className="flex gap-[34px]">
-                <div className="w-[23px] h-[23px] mt-2">
-                  <img src={clock} className="w-full h-full" />
-                </div>
+                {/* <div className="w-[23px] h-[23px] mt-2"> */}
+                  <img src={clock} className="w-[23px] h-[23px] mt-2" />
+                {/* </div> */}
                 <div className="flex flex-col ">
                   <div className="font-raleway font-semibold text-[24px] ">
                     Working Time

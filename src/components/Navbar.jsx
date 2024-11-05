@@ -1,57 +1,116 @@
-import React from "react";
+import { useState } from "react";
 import image from "../assets/HomePage/LOGO.png";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <nav className="bg-[#214A3E] flex justify-center items-center max-zmd:h-[63px] h-[90px] w-[100%]  ">
-      {/* Logo */}
-      <div className="flex justify-between items-center w-[90%] max-xmd:w-[95%]">
-        <img src={image} className=" h-[21px]" />
+    <div>
+      <nav className="bg-[#214A3E] flex justify-center items-center h-[90px] w-[100%]">
+        {/* Logo */}
+        <div className="flex justify-between items-center w-[90%] max-xmd:w-[95%]">
+          <img src={image} className="h-[21px]" />
 
-        <ul className="flex justify-between font-raleway max-w-[533px] max-xmd:items-center flex max-zmd:hidden max-xmd:min-w-[466px]">
+          {/* Hamburger Icon */}
           <div
-            className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
-            onClick={() => navigate("/")}
+            className="flex flex-col space-y-1 cursor-pointer hidden max-zmd:flex"
+            onClick={toggleMenu}
           >
-            <li className="text-white cursor-pointer text-[20px] text-center">
-              Home
-            </li>
+            <span
+              className={`block w-8 h-1 bg-white transition-transform duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            ></span>
+            <span
+              className={`block w-8 h-1 bg-white transition-opacity duration-300 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            ></span>
+            <span
+              className={`block w-8 h-1 bg-white transition-transform duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
+              }`}
+            ></span>
           </div>
-          <div
-            className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
-            onClick={() => navigate("/about-us")}
-          >
-            <li className="text-white cursor-pointer text-[20px]">About</li>
-          </div>
-          <div
-            className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
-            onClick={() => navigate("/products")}
-          >
-            <li className=" text-white cursor-pointer text-[20px]">Products</li>
-          </div>
-          <div
-            className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
-            onClick={() => navigate("/contact-us")}
-          >
-            <li className=" text-white cursor-pointer text-[20px]">
-              Contact Us
-            </li>
-          </div>
-        </ul>
 
-        {/* Explore Button */}
-        <button className="bg-[#10251F] max-xmd:text-[20px] font-raleway max-zmd:hidden flex  w-[184px] h-[56px] flex justify-center items-center text-[#ece6d1] px-[46px] py-[17px] rounded-[81px] text-[24px] leading-[120%]">
-          EXPLORE
-        </button>
-        <div class="flex flex-col space-y-1 hidden max-zmd:flex">
-          <span class="block w-8 h-1 bg-white"></span>
-          <span class="block w-8 h-1 bg-white"></span>
-          <span class="block w-8 h-1 bg-white"></span>
+          {/* Dropdown Menu */}
+          <ul className="flex justify-between font-raleway max-w-[533px] max-xmd:items-center flex max-zmd:hidden max-xmd:min-w-[466px]">
+            <div
+              className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
+              onClick={() => navigate("/")}
+            >
+              <li className="text-white cursor-pointer text-[20px] text-center">
+                Home
+              </li>
+            </div>
+            <div
+              className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
+              onClick={() => navigate("/about-us")}
+            >
+              <li className="text-white cursor-pointer text-[20px]">About</li>
+            </div>
+            <div
+              className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
+              onClick={() => navigate("/products")}
+            >
+              <li className=" text-white cursor-pointer text-[20px]">
+                Products
+              </li>
+            </div>
+            <div
+              className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
+              onClick={() => navigate("/contact-us")}
+            >
+              <li className=" text-white cursor-pointer text-[20px]">
+                Contact Us
+              </li>
+            </div>
+          </ul>
+
+          {/* Explore Button */}
+          <button className="bg-[#10251F] max-xmd:text-[20px] font-raleway max-zmd:hidden flex w-[184px] h-[56px] justify-center items-center text-[#ece6d1] px-[46px] py-[17px] rounded-[81px] text-[24px] leading-[120%]">
+            EXPLORE
+          </button>
+        </div>
+      </nav>
+      <div className="relative">
+        <div
+          className={`absolute top-0 left-0 w-full px-[29px] bg-[#214A3E] flex-col justify-between
+      ${isMenuOpen ? "flex h-[349px] py-[25px]" : "h-0 overflow-hidden "}
+      transition-all duration-300 ease-out z-50
+    `}
+        >
+          {/* Your menu content goes here */}
+          <div className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]">
+            Home
+          </div>
+          <div className="h-0.5 w-full bg-[#8FA49E]"></div>
+          <div className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]">
+            About
+          </div>
+          <div className="h-0.5 w-full bg-[#8FA49E]"></div>
+          <div className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]">
+            Product
+          </div>
+          <div className="h-0.5 w-full bg-[#8FA49E]"></div>
+          <div className="text-[20px] font-raleway text-[#FFFFFF] leading-[120%]">
+            Contact Us
+          </div>
+          <div className="h-0.5 w-full bg-[#8FA49E]"></div>
+          <div className="flex justify-center">
+            <button className="bg-[#10251F] font-raleway flex w-[285px] h-[56px] justify-center items-center text-[#FFFCDB] rounded-[100px] text-[20px] leading-[120%]">
+              EXPLORE
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

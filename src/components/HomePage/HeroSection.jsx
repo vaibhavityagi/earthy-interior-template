@@ -41,7 +41,7 @@ const HeroSection = () => {
           </p>
 
           <button
-            className="font-raleway w-[330px] max-sm:w-[250px] max-sm:h-[44px] h-[63px] gap-[16px] text-[20px] bg-white/5 max-sm:text-[14px] backdrop-blur-sm border border-white text-white py-[16px] px-[23px] rounded-[97px] transition-all flex items-center justify-center relative"
+            className="font-raleway w-[330px] max-sm:w-[250px] max-sm:h-[44px] h-[63px] gap-[16px] hover:gap-[22px] hover:w-[336px] text-[20px] bg-white/5 max-sm:text-[14px] backdrop-blur-sm border border-white text-white py-[16px] px-[23px] rounded-[97px] transition-all flex items-center justify-center relative"
             style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
             aria-label="Explore our collection"
           >

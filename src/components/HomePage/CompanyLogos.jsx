@@ -13,8 +13,8 @@ import logo9 from "../../assets/HomePage/logo9.png";
 const images = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9];
 
 const CompanyLogos = () => (
-    <Marquee speed={500}>
-      <div className="flex gap-[100px] max-md:hidden items-center h-[283px]">
+    <Marquee speed={300}>
+      <div className="flex gap-[100px] items-center h-[283px]">
     
       <img src={logo1} className="w-[332px] h-[93px] pl-[100px]" alt="Logo 1" />
       <img src={logo2} className="w-[296px] h-[93px]" alt="Logo 2" />
