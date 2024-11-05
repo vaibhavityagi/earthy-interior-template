@@ -1,0 +1,76 @@
+<div className="flex space-x-4 w-full  h-[520px]  bg-blue-900   max-sm:h-[291px] max-sm:space-x-[13px] max-sm:space-x-[13px] max-md:space-x-[24px] max-xmd:h-[377px] max-xmd:max-gap-[17px] max-md:max-w-[714px] w-full  max-md:h-[520px]">
+          {/* First Image */}
+          <div
+            className={`relative flex-shrink ${
+              hovered === "second" || hovered === "third"
+                ? "w-[156px] pl-[10px]"
+                : "max-w-[350px] px-[18px] w-full  py-[16px] max-xmd:max-w-[255px] max-md:w-[50%] "
+            } transform transition-width duration-700 ease-out max-sm:w-[197px] rounded-[20px] max-md:max-h-[520px] bg-green-900`}
+            // style={{
+            //   backgroundImage: `url(${image1})`,
+            //   backgroundSize: "cover",
+            // }}
+          >
+            <div
+              className={`relative inline-block font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
+              transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] top-[83%] left-[8%] whitespace-nowrap max-xmd:top-[75%] max-sm:text-[20px] max-sm:top-[80%]`}
+              style={{
+                textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
+              }}
+            >
+              Best Seller
+            </div>
+          </div>
+
+          {/* Second Image */}
+          <div
+            className={`relative flex-shrink ${
+              hovered === "second"
+                ? "w-[350px]"
+                : "max-w-[156px] w-screen max-md:w-[25%] max-xmd:max-w-[112px]"
+            } transform transition-width rounded-[20px] py-[16px] px-[8px] bg-green-900 duration-700 ease-out max-sm:w-[87px]  max-md:max-h-[520px] `}
+            onMouseEnter={() => setHovered("second")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            {/* <img
+              src={image2}
+              alt="Background"
+              className="absolute inset-0 h-full w-full pointer-events-none"
+            /> */}
+            <div
+              className={`relative inline-block font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
+              transform -translate-x-1/2  -translate-y-1/2 rotate-[-90deg] top-[89%] left-[12%] whitespace-nowrap max-xmd:top-[85%] max-sm:text-[20px] max-sm:top-[87%]`}
+              style={{
+                textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
+              }}
+            >
+              Trendy
+            </div>
+          </div>
+
+          {/* Third Image */}
+          <div
+            className={`relative flex-shrink ${
+              hovered === "third"
+                ? "w-[350px]"
+                : "w-[156px] max-md:w-[25%] max-xmd:max-w-[112px]"
+            } transform transition-width  rounded-[20px] bg-green-900 py-[16px] px-[8px] duration-700 ease-out max-sm:w-[87px]  max-md:max-h-[520px] `}
+            onMouseEnter={() => setHovered("third")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            {/* <img
+              src={image3}
+              alt="Background"
+              className="absolute inset-0 h-full w-full pointer-events-none"
+            /> */}
+            <div
+              className={`relative inline-block font-raleway font-bold text-white text-[32px] max-md:text-[40px] 
+              transform -translate-x-1/2  -translate-y-1/2 rotate-[-90deg] top-[89%] left-[12%] whitespace-nowrap max-xmd:top-[85%] max-sm:text-[20px] max-sm:top-[87%]`}
+              style={{
+                textShadow: "4px 4px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
+              }}
+            >
+              Trendy
+            </div>
+          </div>
+        </div>
