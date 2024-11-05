@@ -57,5 +57,5 @@ jobs:
           REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
           TOKEN: ${{ secrets.GI_TOKEN }}
         run: |
-             git remote set-url origin https://mukuldualite:${{ secrets.GI_TOKEN }}@github.com/mukuldualite/Amartesh.git
+             git remote set-url origin https://${{ secrets.GI_TOKEN }}@github.com/mukuldualite/Amartesh.git
              git push origin --all
