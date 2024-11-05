@@ -53,29 +53,31 @@ jobs:
 
       - name: Cherry-pick to Fixes and Features Branches
         run: |
-          set -e  # Stop execution on error
-          COMMIT_HASH=${{ env.commit_hash }}
-          TARGET_BRANCHES=("fixes" "features")
-
-          for TARGET_BRANCH in "${TARGET_BRANCHES[@]}"; do
-            echo "Attempting to cherry-pick commit $COMMIT_HASH to $TARGET_BRANCH"
-            
-            # Check if the branch exists, if not create it from main
-            if ! git rev-parse --verify "$TARGET_BRANCH" >/dev/null 2>&1; then
-              echo "$TARGET_BRANCH does not exist. Creating it from main."
-              git checkout -b "$TARGET_BRANCH" origin/main
-              git push origin "$TARGET_BRANCH" || { echo "Failed to push $TARGET_BRANCH"; exit 1; }
-            else
-              git checkout "$TARGET_BRANCH"
+          # Define prefixes and corresponding branch names
+          prefixes=("fixed" "polished" "ready" "misc" "generated")
+          for prefix in "${prefixes[@]}"; do
+            # Find commits with the prefix
+            commits=$(git log --format='%H %s' main | grep -E "^$prefix:" | awk '{print $1}')
+            if [[ -n "$commits" ]]; then
+              branch="${prefix}-branch"
+              
+              # Check if the branch exists, if not, create it from main
+              if ! git show-ref --quiet refs/heads/"$branch"; then
+                git checkout -b "$branch" origin/main
+              else
+                git checkout "$branch"
+                git merge origin/main
+              fi
+              
+              # Cherry-pick commits
+              for commit in $commits; do
+                git cherry-pick "$commit" || (echo "Cherry-pick failed for commit $commit" && git cherry-pick --abort && exit 1)
+              done
+              
+              # Push to the branch on GitHub using the GITHUB_TOKEN
+              git push origin "$branch"
             fi
-
-            # Attempt cherry-pick
-            if ! git cherry-pick "$COMMIT_HASH"; then
-              echo "::error ::Conflict detected during cherry-pick to $TARGET_BRANCH. Aborting."
-              git cherry-pick --abort
-              exit 1
-            fi
-
-            # Push the changes using the PAT
-            git push origin "$TARGET_BRANCH" || { echo "Failed to push changes to $TARGET_BRANCH"; exit 1; }
           done
+
+
+       
