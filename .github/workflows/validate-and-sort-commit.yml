@@ -53,48 +53,54 @@ jobs:
 
       - name: Cherry-pick to seperate Branches
         run: |
-            set -e  # Stop execution on error
-            
-            # Get the latest commit message
-            COMMIT_MSG=$(git log -1 --pretty=%B)
-            COMMIT_HASH=$(git rev-parse HEAD)
+          set -e  # Stop execution on error
+          
+          # Get the latest commit message and hash
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          COMMIT_HASH=$(git rev-parse HEAD)
 
-            # Define the prefixes and corresponding branches
-            prefixes=("fixed:" "polished:" "ready:" "misc:" "generated:")
-            branch=""
+          # Define the prefixes and corresponding branches
+          prefixes=("fixed:" "polished:" "ready:" "misc:" "generated:")
+          branch=""
 
-            # Determine the branch based on the commit prefix
-            for prefix in "${prefixes[@]}"; do
-              if [[ "$COMMIT_MSG" == "$prefix"* ]]; then
-                branch="${prefix::-1}-branch"  # Remove colon and add '-branch'
-                break
-              fi
-            done
-
-            # If no matching prefix is found, skip the operation
-            if [[ -z "$branch" ]]; then
-              echo "No matching prefix found in the latest commit message. Skipping cherry-pick."
-              exit 0
+          # Determine the branch based on the commit prefix
+          for prefix in "${prefixes[@]}"; do
+            if [[ "$COMMIT_MSG" == "$prefix"* ]]; then
+              branch="${prefix::-1}-branch"  # Remove colon and add '-branch'
+              break
             fi
+          done
 
-            # Check if the branch exists, if not, create it from main
-            if ! git show-ref --quiet refs/heads/"$branch"; then
-              echo "Creating branch '$branch' from 'main'."
-              git checkout -b "$branch" origin/main || { echo "Failed to create branch $branch"; exit 1; }
-              git push origin "$branch" || { echo "Failed to push new branch $branch"; exit 1; }
-            else
-              echo "Branch '$branch' already exists. Checking it out and merging latest from 'main'."
-              git checkout "$branch"
-              git merge origin/main || { echo "Failed to merge 'main' into $branch"; exit 1; }
-            fi
-            
-            # Cherry-pick the latest commit to the branch
-            echo "Cherry-picking commit $COMMIT_HASH with message '$COMMIT_MSG' into branch '$branch'."
-            if ! git cherry-pick "$COMMIT_HASH"; then
-              echo "Cherry-pick failed for commit $COMMIT_HASH, skipping..."
-              git cherry-pick --abort
-              exit 1
-            fi
-            
-            # Push changes to the branch
-            git push origin "$branch" || { echo "Failed to push changes to $branch"; exit 1; }
+          # If no matching prefix is found, skip the operation
+          if [[ -z "$branch" ]]; then
+            echo "No matching prefix found in the latest commit message. Skipping cherry-pick."
+            exit 0
+          fi
+
+          # Check if the branch exists; if not, create it from main
+          if ! git show-ref --quiet refs/heads/"$branch"; then
+            echo "Creating branch '$branch' from 'main'."
+            git checkout -b "$branch" origin/main || { echo "Failed to create branch $branch"; exit 1; }
+            git push origin "$branch" || { echo "Failed to push new branch $branch"; exit 1; }
+          else
+            echo "Branch '$branch' already exists. Checking it out and merging latest from 'main'."
+            git checkout "$branch"
+            git merge origin/main || { echo "Failed to merge 'main' into $branch"; exit 1; }
+          fi
+          
+          # Check if the commit is already in the target branch
+          if git log "$branch" --grep="$COMMIT_HASH" -1 > /dev/null 2>&1; then
+            echo "Commit $COMMIT_HASH is already in branch '$branch'. Skipping cherry-pick."
+            exit 0
+          fi
+
+          # Cherry-pick the latest commit to the branch
+          echo "Cherry-picking commit $COMMIT_HASH with message '$COMMIT_MSG' into branch '$branch'."
+          if ! git cherry-pick "$COMMIT_HASH"; then
+            echo "Cherry-pick failed for commit $COMMIT_HASH, skipping..."
+            git cherry-pick --abort
+            exit 1
+          fi
+          
+          # Push changes to the branch
+          git push origin "$branch" || { echo "Failed to push changes to $branch"; exit 1; }           
