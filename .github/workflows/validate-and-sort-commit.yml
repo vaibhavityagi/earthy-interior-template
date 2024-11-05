@@ -22,9 +22,9 @@ jobs:
         run: |
           git fetch --all
 
-      - name: Filter Cherry-Pick Commits
+      - name: Filter and Cherry-Pick Commits
         env:
-          REPO_URL: "https://github.com/prashantSj789/Testing_regukation.git"
+          REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
           TOKEN: ${{ secrets.GI_TOKEN }}
         run: |
           # Define prefixes and corresponding branch names
@@ -49,13 +49,13 @@ jobs:
               done
               
               # Push to the branch on GitHub using the PAT
-              git push "https://${TOKEN}@${REPO_URL#https://}" "$branch"
+              git push https://${{secrets.GI_TOKEN }}@github.com/mukuldualite/Amartesh.git "$branch"
             fi
           done
       - name: Push changes
         env:
-          REPO_URL: "https://github.com/prashantSj789/Testing_regukation.git"
+          REPO_URL: "https://github.com/mukuldualite/Amartesh.git"
           TOKEN: ${{ secrets.GI_TOKEN }}
         run: |
-             git remote set-url origin https://prashantSj789:${PAT_TOKEN}@github.com/prashantSj789/Testing_regukation.git
+             git remote set-url origin https://mukuldualite:${{ secrets.GI_TOKEN }}@github.com/mukuldualite/Amartesh.git
              git push origin --all
