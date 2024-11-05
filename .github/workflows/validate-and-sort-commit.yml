@@ -51,36 +51,37 @@ jobs:
           git remote set-url origin https://${{ secrets.GI_TOKEN }}:x-oauth-basic@github.com/mukuldualite/Amartesh.git
           echo "Git remote URL set with PAT."
 
-      - name: Cherry-pick to Branches
-        run: |
-          set -e  # Stop execution on error
-          # Define prefixes and corresponding branch names
-          prefixes=("fixed" "polished" "ready" "misc" "generated")
-          for prefix in "${prefixes[@]}"; do
-            # Find commits with the prefix
-            commits=$(git log --format='%H %s' main | grep -E "^${prefix}:" | awk '{print $1}')
-            if [[ -n "$commits" ]]; then
+          - name: Cherry-pick to Branches
+          run: |
+            set -e  # Stop execution on error
+            prefixes=("fixed" "polished" "ready" "misc" "generated")
+            for prefix in "${prefixes[@]}"; do
               branch="${prefix}-branch"
               
               # Check if the branch exists, if not, create it from main
               if ! git show-ref --quiet refs/heads/"$branch"; then
-                git checkout -b "$branch" origin/main
+                echo "Creating branch '$branch' from 'main'."
+                git checkout -b "$branch" origin/main || { echo "Failed to create branch $branch"; exit 1; }
+                git push origin "$branch" || { echo "Failed to push new branch $branch"; exit 1; }
               else
+                echo "Branch '$branch' already exists. Checking it out and merging latest from 'main'."
                 git checkout "$branch"
-                git merge origin/main
+                git merge origin/main || { echo "Failed to merge 'main' into $branch"; exit 1; }
               fi
               
-              # Cherry-pick commits
-              for commit in $commits; do
-                if ! git cherry-pick "$commit"; then
-                  echo "Cherry-pick failed for commit $commit, skipping..."
-                  git cherry-pick --abort
-                fi
-              done
-              
-              # Push to the branch on GitHub using the PAT
-              git push origin "$branch"
-            else
-              echo "No commits found for prefix '${prefix}'"
-            fi
-          done
+              # Find and cherry-pick commits with the prefix
+              commits=$(git log --format='%H %s' main | grep -E "^${prefix}:" | awk '{print $1}')
+              if [[ -n "$commits" ]]; then
+                echo "Cherry-picking commits for prefix '$prefix' into branch '$branch'."
+                for commit in $commits; do
+                  if ! git cherry-pick "$commit"; then
+                    echo "Cherry-pick failed for commit $commit, skipping..."
+                    git cherry-pick --abort
+                  fi
+                done
+                git push origin "$branch" || { echo "Failed to push changes to $branch"; exit 1; }
+              else
+                echo "No commits found for prefix '$prefix' to cherry-pick into '$branch'."
+              fi
+            done
+        
