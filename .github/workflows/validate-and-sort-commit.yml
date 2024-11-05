@@ -51,7 +51,7 @@ jobs:
           git remote set-url origin https://${{ secrets.GI_TOKEN }}:x-oauth-basic@github.com/mukuldualite/Amartesh.git
           echo "Git remote URL set with PAT."
 
-      - name: Cherry-pick to Branches
+      - name: Cherry-pick to seperate Branches
         run: |
             set -e  # Stop execution on error
             prefixes=("fixed" "polished" "ready" "misc" "generated")
