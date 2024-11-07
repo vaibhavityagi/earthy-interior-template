@@ -6,8 +6,8 @@ import image3 from "../assets/HomePage/facebook.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#214A3E] flex  text-white px-[75px] pt-[96px] w-full max-md:h-[980px] max-zsm:h-[1566px] max-zsm:px-[50px] ">
-      <div className="flex flex-col w-full max-zmd:gap-[96px] max-sm:gap-[69px]">
+    <footer className="bg-[#214A3E] flex  text-white px-[75px] pb-[15px] pt-[96px] w-full max-md:h-[980px] max-md:pb-[0px] max-zsm:h-[1566px] max-zsm:px-[50px] ">
+      <div className="flex flex-col w-full gap-[68px] max-zmd:gap-[96px] max-sm:gap-[69px]">
         {/* Logo and Description */}
         <div className="flex justify-between flex-wrap max-zmd:grid max-zmd:grid-cols-2 max-zmd:gap-[96px] max-zsm:flex max-zsm:flex-col ">
           <div className="pr-[17px] pb-[45px] max-w-[295px]   flex flex-col gap-[25px] max-md:pb-0 max-zsm:items-center max-zsm:max-w-[580px] max-sm:pr-0">
@@ -26,16 +26,16 @@ const Footer = () => {
               COMPANY
             </h3>
             <ul className="space-y-2 max-zsm:text-center">
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 About us
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Partner program
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Contact us
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Privacy Policy
               </li>
             </ul>
@@ -46,16 +46,16 @@ const Footer = () => {
               QUICK LINKS
             </h3>
             <ul className="space-y-2 max-md:space-y-[13px] max-zsm:text-center">
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Pricing
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Reviews
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Mail
               </li>
-              <li className="text-[16px] font-roboto font-light leading-[30px]">
+              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Contact us
               </li>
             </ul>
@@ -71,7 +71,7 @@ const Footer = () => {
               <br />
               www.cementolime.com
             </p>
-            <p className="font-bold font-raleway text-[20px]">HELPLINE</p>
+            <p className="font-bold pt-[10px] font-raleway text-[20px]">HELPLINE</p>
             <p className="text-[24px] font-roboto font-extralight max-md:text-[20px] max-sm:text-[16px]">
               +91 9580628537
             </p>

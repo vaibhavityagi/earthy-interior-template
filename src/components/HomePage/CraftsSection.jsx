@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import image1 from "../../assets/HomePage/11.png";
 import image2 from "../../assets/HomePage/22.png";
 import image3 from "../../assets/HomePage/33.png";
 import image4 from "../../assets/HomePage/44.png";
 const CraftsSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full  flex  h-full items-center justify-center py-[126px] px-[77px] max-635px:px-[18px] ">
       {/* Title and description */}
@@ -69,8 +71,11 @@ const CraftsSection = () => {
               >
                 {/* Flex container for centering the button */}
                 {/* <div className="absolute inset-0 flex items-center justify-center"> */}
-                  <div className="max-md:text-[15px] text-white text-[36px] underline  max-635px:text-[12px] font-raleway">
-                    Show More
+                <div
+                  className="max-md:text-[15px] text-white text-[36px] underline  max-635px:text-[12px] cursor-pointer font-raleway"
+                  onClick={() => navigate("/products")}
+                >
+                  Show More
                   {/* </div> */}
                 </div>
               </div>

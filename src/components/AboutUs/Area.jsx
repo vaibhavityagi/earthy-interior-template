@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import plus from "../../assets/AboutUs/plus.png";
 import cross from "../../assets/AboutUs/cross.png";
+import { useNavigate } from "react-router-dom";
 
 const materials = [
   {
@@ -31,12 +32,12 @@ const materials = [
 
 const Area = () => {
   const [expandedId, setExpandedId] = useState(null);
-
+  const navigate = useNavigate();
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
   };
   return (
-    <section className="flex items-center w-full px-[72px] max-sm:px-[31px] py-[100px]">
+    <section className="flex items-center w-full px-[72px] max-sm:px-[31px] py-[100px]" >
       <div className=" flex items-center w-full gap-[34px] max-sm:gap-[32px] max-md:flex-col ">
         <div className="max-w-[644px] flex  flex-col gap-[54px] w-full max-sm:gap-[32px] max-h-[595px] h-full ">
           <div className="flex flex-col gap-[26px]">
@@ -60,7 +61,10 @@ const Area = () => {
             to a wide range of surfaces.
           </p>
 
-          <button className="bg-[#214A3E] font-raleway w-[214px] h-[50px] hover:bg-[#1D352E]  hover:w-[220px] transition-all duration-200 text-white px-[24px] py-[13px] rounded-[89px] text-[20px] flex items-center justify-between group">
+          <button
+            className="bg-[#214A3E] font-raleway w-[214px] h-[50px] hover:bg-[#1D352E]  hover:w-[220px] transition-all duration-200 text-white px-[24px] py-[13px] rounded-[89px] text-[20px] flex items-center justify-between group"
+            onClick={() => navigate("/products")}
+          >
             Our Products
             <span className=" w-[29px] h-[1px] bg-white inline-block relative transition-all duration-200 group-hover:ml-[20px]">
               <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>

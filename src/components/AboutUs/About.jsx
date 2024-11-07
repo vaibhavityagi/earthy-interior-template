@@ -4,10 +4,10 @@ import image2 from "../../assets/AboutUs/Image2.png";
 
 const About = () => {
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%]" id="aboutus">
       <section className="flex justify-center items-center w-full">
-        <div className=" flex max-md:flex-col  items-center gap-[95px] py-[95px] max-xsm:py-[80px] px-[81px] max-md:px-[68px] max-xsm:px-[24px] justify-center max-md:gap-[103px] max-md:px-[0px]">
-          <div className="max-w-[644px]   w-full   h-full space-y-[23px] ">
+        <div className=" flex max-md:flex-col  items-center gap-[95px] py-[95px] max-xsm:py-[80px] px-[81px] max-md:px-[68px] max-xsm:px-[24px] justify-center max-md:gap-[103px] max-sm:gap-[26px] max-md:px-[0px]">
+          <div className="max-w-[644px] w-full   h-full space-y-[23px] ">
             <div className="flex items-center mb-4">
               <div className="w-[64px] h-[2px] bg-[#8FA49E] "></div>
               <h2 className="text-[14px] font-raleway font-semibold uppercase  tracking-wider text-[#8FA49E] ml-3">
@@ -33,19 +33,19 @@ const About = () => {
           </div>
 
           {/* Right Side - Image Section */}
-          <div className=" max-w-[592px] w-full h-[560px] flex justify-center gap-[16px]">
-            <div className="flex h-full w-full ">
+          <div className=" max-w-[592px] w-full h-[560px] max-sm:h-[348px] flex justify-center gap-[16px] max-sm:gap-[8px]">
+            <div className="flex h-full w-full max-sm:w-[43.62%]  max-sm:pt-6">
               <img
                 src={image1}
                 alt="Decorative Image"
-                className=" w-[280px] h-[480px]"
+                className=" w-[280px] h-[480px] max-sm:w-full max-sm:h-[258px]"
               />
             </div>
-            <div className="flex h-full w-full items-end">
+            <div className="flex h-full w-full max-sm:w-[54.46%]  items-end max-sm:pb-6">
               <img
                 src={image2}
                 alt="Decorative Image"
-                className=" w-[280px] h-[480px]"
+                className=" w-[280px] h-[480px] max-sm:w-full max-sm:h-[258px]"
               />
             </div>
           </div>

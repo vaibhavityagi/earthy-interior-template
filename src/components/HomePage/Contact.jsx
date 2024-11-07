@@ -29,17 +29,17 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="Enter Full Name"
-                className="w-full max-w-[278px] max-md:h-[49px] placeholder-[#8FA49E] font-raleway placeholder-text-[18px] max-md:text-[14px] h-[57px] p-3 bg-[#E5EDE4] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full max-w-[278px] max-md:h-[49px] placeholder-[#8FA49E] font-raleway placeholder-text-[18px] max-md:text-[14px] h-[57px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
               <input
                 type="text"
                 placeholder="Enter Mobile Number"
-                className="w-full max-w-[278px] placeholder-[#8FA49E] max-md:h-[49px] font-raleway placeholder-text-[18px] max-md:text-[14px] h-[57px] p-3 bg-[#E5EDE4] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full max-w-[278px] placeholder-[#8FA49E] max-md:h-[49px] font-raleway placeholder-text-[18px] max-md:text-[14px] h-[57px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
             <textarea
               placeholder="Enter Your Message"
-              className="w-full max-w-[587px] h-[144px] placeholder-[#8FA49E] max-md:h-[99px] font-raleway placeholder-text-[18px] max-md:text-[14px] p-3 bg-[#E5EDE4] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full max-w-[587px] h-[144px] placeholder-[#8FA49E] max-md:h-[99px] font-raleway placeholder-text-[18px] max-md:text-[14px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <button
               type="submit"

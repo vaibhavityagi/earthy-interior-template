@@ -2,7 +2,9 @@ import React from "react";
 import image1 from "../../assets/HomePage/color-palette.png";
 import image2 from "../../assets/HomePage/pikaso.png";
 import image3 from "../../assets/HomePage/textures.png";
+import { useNavigate } from "react-router-dom";
 const Texture = () => {
+  const navigate = useNavigate();
   return (
     <div className=" flex flex-col items-center justify-center bg-[#F8F8F8] h-full py-[86px] px-[88px] w-full gap-[68px] max-534px:px-[24px] ">
       <div className="flex flex-col items-center gap-[40px]">
@@ -57,7 +59,10 @@ const Texture = () => {
       </div>
 
       {/* Button */}
-      <button className=" px-[24px] py-[13px] bg-[#214A3E] leading-[120%] gap-[14px] hover:bg-[#1D352E]  hover:w-[264px] transition-all duration-200 hover:gap-[20px] text-white text-[19px] rounded-full   w-[258px] h-[50px] flex items-center justify-center">
+      <button
+        className=" px-[24px] py-[13px] bg-[#214A3E] leading-[120%] gap-[14px] hover:bg-[#1D352E]  hover:w-[264px] transition-all duration-200 hover:gap-[20px] text-white text-[19px] rounded-full   w-[258px] h-[50px] flex items-center justify-center"
+        onClick={() => navigate("/products")}
+      >
         <div className="font-raleway text-[20px] font-medium">
           Make your Choice
         </div>

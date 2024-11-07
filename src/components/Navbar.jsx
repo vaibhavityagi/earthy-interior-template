@@ -88,35 +88,35 @@ const Navbar = () => {
         >
           {/* Your menu content goes here */}
           <div
-            className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]"
+            className="text-[20px] text-[#FFFFFF] font-raleway cursor-pointer leading-[120%]"
             onClick={() => navigate("/")}
           >
             Home
           </div>
           <div className="h-0.5 w-full bg-[#8FA49E]"></div>
           <div
-            className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]"
+            className="text-[20px] text-[#FFFFFF] font-raleway cursor-pointer leading-[120%]"
             onClick={() => navigate("/about-us")}
           >
             About
           </div>
           <div className="h-0.5 w-full bg-[#8FA49E]"></div>
           <div
-            className="text-[20px] text-[#FFFFFF] font-raleway leading-[120%]"
+            className="text-[20px] text-[#FFFFFF] font-raleway cursor-pointer leading-[120%]"
             onClick={() => navigate("/products")}
           >
             Product
           </div>
           <div className="h-0.5 w-full bg-[#8FA49E]"></div>
           <div
-            className="text-[20px] font-raleway text-[#FFFFFF] leading-[120%]"
+            className="text-[20px] font-raleway text-[#FFFFFF] cursor-pointer leading-[120%]"
             onClick={() => navigate("/contact-us")}
           >
             Contact Us
           </div>
           <div className="h-0.5 w-full bg-[#8FA49E]"></div>
           <div className="flex justify-center">
-            <button className="bg-[#10251F] font-raleway flex w-[285px] h-[56px] justify-center items-center text-[#FFFCDB] rounded-[100px] text-[20px] leading-[120%]">
+            <button className="bg-[#10251F] font-raleway flex w-[285px] cursor-pointer h-[56px] justify-center items-center text-[#FFFCDB] rounded-[100px] text-[20px] leading-[120%]">
               EXPLORE
             </button>
           </div>

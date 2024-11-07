@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import image1 from "../../assets/HomePage/1.png";
 import image2 from "../../assets/HomePage/2.jpg";
 import image3 from "../../assets/HomePage/3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   // Array of images for the carousel
   const images = [image1, image2, image3];
+  const navigate = useNavigate();
 
   // State to track the current background image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,7 +21,9 @@ const HeroSection = () => {
     // Clear interval on component unmount
     return () => clearInterval(interval);
   }, [images.length]);
-
+  const handleDotClick = (index) => {
+    setCurrentImageIndex(index);
+  };
   return (
     <section
       className="relative bg-cover bg-center h-[760px] w-full p-[10px] flex justify-center items-center max-sm:h-[520px]"
@@ -41,9 +45,10 @@ const HeroSection = () => {
           </p>
 
           <button
-            className="font-raleway w-[330px] max-sm:w-[250px] max-sm:h-[44px] h-[63px] gap-[16px] hover:gap-[22px] hover:w-[336px] text-[20px] bg-white/5 max-sm:text-[14px] backdrop-blur-sm border border-white text-white py-[16px] px-[23px] rounded-[97px] transition-all flex items-center justify-center relative"
+            className="font-raleway w-[330px] max-sm:w-[250px] max-sm:h-[44px] h-[63px] gap-[16px] hover:gap-[22px] hover:w-[336px] text-[20px] bg-white/5 max-sm:text-[14px] backdrop-blur-sm hover:backdrop-blur-lg border border-white text-white py-[16px] px-[23px] rounded-[97px] transition-all flex items-center justify-center relative"
             style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
             aria-label="Explore our collection"
+            onClick={() => navigate("/products")}
           >
             Explore Our Collection
             <span className="w-[57px] max-sm:w-[40px] h-[1px] bg-white inline-block relative">
@@ -53,11 +58,12 @@ const HeroSection = () => {
         </div>
 
         {/* Indicator Dots */}
-        <div className="relative w-[200px] justify-between flex gap-[10px]">
+        <div className="relative w-[200px] justify-between flex gap-[10px] ">
           {images.map((_, index) => (
             <div
               key={index}
-              className={`w-[60px] h-[9px] rounded-full ${
+              onClick={() => handleDotClick(index)}
+              className={`w-[60px] cursor-pointer h-[9px] rounded-full ${
                 index === currentImageIndex
                   ? "bg-white"
                   : "bg-[#FFFFFF] opacity-[52%]"

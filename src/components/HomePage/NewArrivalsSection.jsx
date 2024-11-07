@@ -1,12 +1,14 @@
 import React from "react";
 import image from "../../assets/HomePage/rectangle.png";
+import { useNavigate } from "react-router-dom";
 const NewArrivalsSection = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="relative h-[615px] flex items-start justify-start px-[260px] py-[98px] w-full max-md:px-[100px] max-sm:px-[35px] bg-center"
       style={{
         backgroundImage: `url(${image})`,
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       {/* Overlay */}
@@ -27,7 +29,10 @@ const NewArrivalsSection = () => {
         </h1>
 
         {/* Button with Arrow */}
-        <button className=" font-raleway hover:bg-[#1D352E]  hover:w-[185px] transition-all duration-200 w-[179px] hover:gap-[20px] h-[50px] flex gap-[14px] text-[20px] relative bg-[#214A3E] py-[13px] px-[20px] rounded-full text-white  flex items-center justify-center transition-all">
+        <button
+          className=" font-raleway hover:bg-[#1D352E]  hover:w-[185px] transition-all duration-200 w-[179px] hover:gap-[20px] h-[50px] flex gap-[14px] text-[20px] relative bg-[#214A3E] py-[13px] px-[20px] rounded-full text-white  flex items-center justify-center transition-all"
+          onClick={() => navigate("/products")}
+        >
           Purchase
           <span className="  w-[29px] h-[1px] bg-white inline-block relative">
             <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>

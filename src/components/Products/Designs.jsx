@@ -10,6 +10,13 @@ import image8 from "../../assets/Product/8.png";
 import image9 from "../../assets/Product/9.png";
 
 const Designs = () => {
+  const handleDownload = () => {
+    // Provide the path to the PDF in the `public` folder
+    const link = document.createElement("a");
+    link.href = `/sample.pdf`; // Update with your actual file path
+    link.download = "catalogue.pdf"; // Filename for the downloaded PDF
+    link.click();
+  };
   return (
     <div className="w-full flex justify-center pb-[83px] pt-[246px]">
       <div className="flex h-full justify-center items-center gap-[88px] max-md:gap-[64px] flex-col w-[83.89%] max-md:w-[89.58%] max-sm:w-[70.82%]">
@@ -111,7 +118,9 @@ const Designs = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            >   <div
+            >
+              {" "}
+              <div
                 className="text-[3vw] max-md:text-[5vw] max-sm:text-[10vw] leading-[120%] font-raleway font-bold text-[#FFFFFF] text-center overflow-hidden"
                 style={{
                   maxWidth: "80%",
@@ -130,7 +139,9 @@ const Designs = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            >   <div
+            >
+              {" "}
+              <div
                 className="text-[3vw] max-md:text-[5vw] max-sm:text-[10vw] leading-[120%] font-raleway font-bold text-[#FFFFFF] text-center overflow-hidden"
                 style={{
                   maxWidth: "80%",
@@ -142,7 +153,7 @@ const Designs = () => {
             </div>
           </div>
           <div className="flex w-full max-md:h-full h-[25vw] max-md:w-full gap-[64px] max-md:flex-col">
-          <div
+            <div
               className="rounded-full flex w-[25vw] h-[25vw] max-md:w-full max-md:h-[40vw] max-sm:h-[70vw] items-center justify-center"
               style={{
                 // width: "25vw",
@@ -151,7 +162,9 @@ const Designs = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            >     <div
+            >
+              {" "}
+              <div
                 className="text-[3vw] max-md:text-[5vw] max-sm:text-[10vw] leading-[120%] font-raleway font-bold text-[#000000] text-center overflow-hidden"
                 style={{
                   maxWidth: "80%",
@@ -170,7 +183,9 @@ const Designs = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            >   <div
+            >
+              {" "}
+              <div
                 className="text-[3vw] max-md:text-[5vw] max-sm:text-[9vw] leading-[120%] font-raleway font-bold text-[#000000] text-center overflow-hidden"
                 style={{
                   maxWidth: "80%",
@@ -189,7 +204,9 @@ const Designs = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            >    <div
+            >
+              {" "}
+              <div
                 className="text-[3vw] max-md:text-[5vw] max-sm:text-[9vw] leading-[120%] font-raleway font-bold text-[#000000] text-center overflow-hidden"
                 style={{
                   maxWidth: "80%",
@@ -202,7 +219,7 @@ const Designs = () => {
             </div>
           </div>
           <div className="flex w-full h-[25vw] gap-[64px] max-md:hidden">
-          <div
+            <div
               className="rounded-full flex items-center justify-center"
               style={{
                 width: "25vw",
@@ -268,7 +285,12 @@ const Designs = () => {
           </div>
         </div>
         <button className=" px-[24px] py-[13px] bg-[#214A3E] leading-[120%] gap-[14px] hover:bg-[#1D352E]  hover:w-[203px] transition-all duration-200 hover:gap-[20px] text-white text-[19px] rounded-full   w-[197px] h-[50px] flex items-center justify-center">
-          <div className="font-raleway text-[20px] font-medium">Know More</div>
+          <div
+            className="font-raleway text-[20px] font-medium"
+            onClick={handleDownload}
+          >
+            Know More
+          </div>
           <span className=" w-[29px] h-[1px] bg-white inline-block relative">
             <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>
           </span>

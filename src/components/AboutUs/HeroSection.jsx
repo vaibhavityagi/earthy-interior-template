@@ -3,6 +3,12 @@ import image from "../../assets/AboutUs/hero-image.png";
 import image1 from "../../assets/AboutUs/Vector.png";
 
 const HeroSections = () => {
+  const handleScrollToAboutUs = () => {
+    const aboutUsSection = document.getElementById("aboutus");
+    if (aboutUsSection) {
+      aboutUsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       className="relative bg-cover bg-center h-[621px] w-full flex flex-col justify-end items-center "
@@ -12,7 +18,10 @@ const HeroSections = () => {
         <span className="italic">Luxury Finishes</span> that Stand the Test of
         Time
       </div>
-      <div className="text-[20px] flex flex-col h-[238px] max-sm:h-[320px] items-center justify-center font-roboto leading-[32px] text-[#BDBDBD]">
+      <div
+        className="text-[20px] flex flex-col cursor-pointer h-[238px] max-sm:h-[320px] items-center justify-center font-roboto leading-[32px] text-[#BDBDBD]"
+        onClick={handleScrollToAboutUs}
+      >
         <div className="h-[32px]">ABOUT US</div>
         <div className="w-[31px] h-[31px] flex justify-center items-center hover:translate-y-[5px] transition-transform duration-200">
           <img src={image1} className="w-[16px] h-[9px]" />

@@ -7,6 +7,13 @@ import aes from "../../assets/HomePage/aes.png";
 
 const Collection = () => {
   const [hovered, setHovered] = useState(null);
+  const handleDownload = () => {
+    // Provide the path to the PDF in the `public` folder
+    const link = document.createElement("a");
+    link.href = `/sample.pdf`; // Update with your actual file path
+    link.download = "catalogue.pdf"; // Filename for the downloaded PDF
+    link.click();
+  };
   return (
     <div className="flex items-center w-full justify-end h-full py-[90px] pl-[68px] max-xmd:pl-[0] max-md:justify-end  max-sm:pl-[10px]">
       <div className="w-full h-full gap-[93px]  max-w-[96.3%] flex items-center flex-row justify-between max-md:flex-col max-md:justify-center max-md:items-start  max-sm:max-h-[576px] max-md:h-[886px] max-md:gap-[45px]">
@@ -29,7 +36,10 @@ const Collection = () => {
 
           {/* Button for Large Screens */}
           <div className="flex max-md:hidden">
-            <button className="bg-[#214A3E] hover:bg-[#1D352E]  hover:w-[308px] transition-all duration-200 hover:gap-[20px] gap-[14px] text-white px-[24px] py-[13px] text-[20px] rounded-[89px] font-raleway flex items-center justify-between max-xmd:text-[15px]">
+            <button
+              className="bg-[#214A3E] hover:bg-[#1D352E]  hover:w-[308px] transition-all duration-200 hover:gap-[20px] gap-[14px] text-white px-[24px] py-[13px] text-[20px] rounded-[89px] font-raleway flex items-center justify-between max-xmd:text-[15px]"
+              onClick={handleDownload}
+            >
               Explore Our Collection
               <span className=" w-[29px] h-[1px] bg-white inline-block relative">
                 <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>

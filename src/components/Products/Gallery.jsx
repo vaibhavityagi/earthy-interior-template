@@ -7,7 +7,7 @@ import image4 from "../../assets/Product/Image44.png";
 const Gallery = () => {
   return (
     <div className="bg-[#F8F8F8] flex justify-center items-center w-full h-[739px]  max-sm:h-screen">
-      <div className="w-[90.9%] h-[467px] max-md:h-[573px]  max-sm:h-full flex flex-col justify-between max-sm:justify-center max-sm:gap-[20px]">
+      <div className="w-[90.9%] h-[467px] max-md:h-[573px]  max-sm:w-full max-sm:h-full flex flex-col justify-between max-sm:justify-center max-sm:gap-[20px]">
         <div className="flex w-full justify-between items-center max-sm:flex-col max-sm:gap-[15px]">
           <div className="font-italiana text-[32px] text-[#000000]">
             Cementolime
@@ -18,7 +18,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className="flex gap-[30px] w-full max-sm:h-[1020px] h-[392px] max-sm:items-center max-md:h-[498px] max-sm:w-[100%]  max-md:flex-col">
-          <div className="w-[50%] max-md:w-[100%]  h-[100%] max-md:h-[50%] justify-center max-sm:w-[328px] flex gap-[30px] max-sm:flex-col">
+          <div className="w-[50%] max-md:w-[100%]  h-[100%] max-md:h-[50%] justify-center max-sm:w-[77.36%] flex gap-[30px] max-sm:flex-col">
             <div
               className="w-[50%]  h-[100%] max-sm:h-[50%] max-sm:w-[100%]"
               style={{
@@ -37,7 +37,7 @@ const Gallery = () => {
               }}
             ></div>
           </div>
-          <div className="w-[50%] max-md:h-[50%] max-md:w-[100%] max-sm:w-[328px]  h-[100%] flex gap-[30px] max-sm:flex-col">
+          <div className="w-[50%] max-md:h-[50%] max-md:w-[100%] max-sm:w-[77.36%]  h-[100%] flex gap-[30px] max-sm:flex-col">
             <div
               className="w-[50%] h-[100%] max-sm:h-[50%] max-sm:w-[100%] flex justify-center items-center"
               style={{

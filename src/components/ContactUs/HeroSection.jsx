@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div
         className="font-raleway text-[64px] text-[#403F37] font-bold max-sm:text-[40px]"
         style={{
-          textShadow: "0px 1px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
+          textShadow: "2px 2px 2px 5.8px rgba(0, 0, 0, 0.54)", // Text shadow isn't directly available in Tailwind
         }}
       >
         Contact Us
