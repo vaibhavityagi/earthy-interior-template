@@ -12,7 +12,7 @@ const Gallery = () => {
           <div className="font-italiana text-[32px] text-[#000000]">
             Cementolime
           </div>
-          <div className="font-raleway text-[16px] text-[#665244] flex gap-[8px]">
+          <div className="font-raleway cursor-pointer text-[16px] text-[#665244] flex gap-[8px]">
             <img src={instagram} className="w-[25px] h-[24px]" />
             <div>FOLLOW US ON INSTAGRAM</div>
           </div>
