@@ -3,8 +3,11 @@ import image from "../assets/HomePage/flogo.svg";
 import image1 from "../assets/HomePage/x.png";
 import image2 from "../assets/HomePage/instagram.png";
 import image3 from "../assets/HomePage/facebook.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+  
   return (
     <footer className="bg-[#214A3E] flex  text-white px-[75px] pb-[15px] pt-[96px] w-full max-md:h-[980px] max-md:pb-[0px] max-zsm:h-[1566px] max-zsm:px-[50px] ">
       <div className="flex flex-col w-full gap-[68px] max-zmd:gap-[96px] max-sm:gap-[69px]">
@@ -25,40 +28,48 @@ const Footer = () => {
             <h3 className="font-bold font-raleway leading-[18px] text-[20px] max-zsm:text-center">
               COMPANY
             </h3>
-            <ul className="space-y-2 max-zsm:text-center">
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
-                About us
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+            <div className="space-y-2 flex flex-col max-zsm:text-center">
+              {/* <li className="text-[16px] font-roboto font-extralight leading-[30px]"> */}
+              <Link to="/about-us" className="text-[16px] font-roboto font-extralight leading-[30px]">
+                  About us
+                </Link>
+              {/* </li> */}
+              {/* <li className="text-[16px] font-roboto font-extralight leading-[30px]"> */}
+              <Link to="/about-us" className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Partner program
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+                </Link>
+              {/* </li> */}
+              {/* <li className="text-[16px] font-roboto font-extralight leading-[30px]"> */}
+              <Link to="/contact-us" className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Contact us
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+                </Link>
+              {/* </li> */}
+              {/* <li className="text-[16px] font-roboto font-extralight leading-[30px]"> */}
+              <Link to="/about-us" className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Privacy Policy
-              </li>
-            </ul>
+                </Link>
+              {/* </li> */}
+            </div>
           </div>
 
-          <div className="flex flex-col gap-[27px] text-left">
+         <div className="flex flex-col gap-[27px] text-left">
             <h3 className="font-bold font-raleway leading-[18px] text-[20px] max-zsm:text-center">
               QUICK LINKS
             </h3>
-            <ul className="space-y-2 max-md:space-y-[13px] max-zsm:text-center">
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+            <div className="space-y-2 max-md:space-y-[13px] flex flex-col max-zsm:text-center">
+              <Link to="/about-us"  className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Pricing
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+                </Link>
+              <Link to="/about-us"  className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Reviews
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+                </Link>
+              <Link to="/about-us"  className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Mail
-              </li>
-              <li className="text-[16px] font-roboto font-extralight leading-[30px]">
+                </Link>
+              <Link to="/contact-us"  className="text-[16px] font-roboto font-extralight leading-[30px]">
                 Contact us
-              </li>
-            </ul>
+                </Link>
+            </div>
           </div>
 
           <div className="text-left flex flex-col space-y-[14px] gap-[8px] max-zsm:text-center max-sm:h-[246px]">
@@ -71,7 +82,9 @@ const Footer = () => {
               <br />
               www.cementolime.com
             </p>
-            <p className="font-bold pt-[20px] leading-[18px] tracking-[1.5px] font-raleway text-[20px]">HELPLINE</p>
+            <p className="font-bold pt-[20px] leading-[18px] tracking-[1.5px] font-raleway text-[20px]">
+              HELPLINE
+            </p>
             <p className="text-[24px] font-roboto font-extralight leading-[120%] max-md:text-[20px] max-sm:text-[16px]">
               +91 9580628537
             </p>

@@ -9,12 +9,14 @@ import HomePage from "./components/HomePage";
 import AboutUsPage from "./components/AboutUsPage";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
+import ScrollToTop from "../ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="w-[100%]">
         <Navbar />
+          <ScrollToTop/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
