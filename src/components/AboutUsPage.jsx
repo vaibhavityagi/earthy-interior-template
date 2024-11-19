@@ -11,7 +11,7 @@ function AboutUsPage() {
   return (
     <div className="w-[100%]">
       <HeroSection />
-      <Certifications />
+      {/* <Certifications /> */}
       <About />
       <Benefits />
       <Services />

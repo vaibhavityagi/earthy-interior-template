@@ -20,7 +20,7 @@ const Services = () => {
                 High Quality
               </div>
               <div className="font-raleway text-[20px] leading-[150%] font-light">
-                crafted from top materials
+                Crafted from top materials
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ const Services = () => {
                 Free Shipping
               </div>
               <div className="font-raleway text-[20px] leading-[150%] font-light">
-                Order over 150 $
+                Order over $150
               </div>
             </div>
           </div>

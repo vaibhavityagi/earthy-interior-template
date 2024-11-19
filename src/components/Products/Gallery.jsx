@@ -14,50 +14,79 @@ const Gallery = () => {
           </div>
           <div className="font-raleway cursor-pointer text-[16px] text-[#665244] flex gap-[8px]">
             <img src={instagram} className="w-[25px] h-[24px]" />
-            <div>FOLLOW US ON INSTAGRAM</div>
+            <div>FOLLOW US ON INSTAGRAM</div> 
           </div>
         </div>
         <div className="flex gap-[30px] w-full max-sm:h-[1020px] h-[392px] max-sm:items-center max-md:h-[498px] max-sm:w-[100%]  max-md:flex-col">
           <div className="w-[50%] max-md:w-[100%]  h-[100%] max-md:h-[50%] justify-center max-sm:w-[77.36%] flex gap-[30px] max-sm:flex-col">
             <div
-              className="w-[50%]  h-[100%] max-sm:h-[50%] max-sm:w-[100%]"
+              className="w-[50%]  h-[100%] cursor-pointer max-sm:h-[50%] max-sm:w-[100%] flex justify-center items-center relative group"
               style={{
                 backgroundImage: `url(${image1})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 // backgroundRepeat: "no-repeat",
               }}
-            ></div>
+              onClick={() => window.open("https://www.instagram.com/cemento.lime/", "_blank")}
+            >
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+{/* SEE MORE Text */}
+<div className="text-[#FFFFFF] font-regular text-[18px] font-raleway underline opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+  SEE MORE
+</div>
+            </div>
             <div
-              className="w-[50%] h-[100%] max-sm:h-[50%] max-sm:w-[100%]"
+              className="w-[50%] h-[100%] max-sm:h-[50%] cursor-pointer max-sm:w-[100%] flex justify-center items-center relative group"
               style={{
                 backgroundImage: `url(${image2})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-            ></div>
+              onClick={() => window.open("https://www.instagram.com/cemento.lime/", "_blank")}
+            >
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+{/* SEE MORE Text */}
+<div className="text-[#FFFFFF] font-regular text-[18px] font-raleway underline opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+  SEE MORE
+</div>
+            </div>
           </div>
           <div className="w-[50%] max-md:h-[50%] max-md:w-[100%] max-sm:w-[77.36%]  h-[100%] flex gap-[30px] max-sm:flex-col">
+          <div
+  className="w-[50%] h-[100%] cursor-pointer max-sm:h-[50%] max-sm:w-[100%] flex justify-center items-center relative group"
+  style={{
+    backgroundImage: `url(${image3})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+  onClick={() => window.open("https://www.instagram.com/cemento.lime/", "_blank")}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+  {/* SEE MORE Text */}
+  <div className="text-[#FFFFFF] font-regular text-[18px] font-raleway underline opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+    SEE MORE
+  </div>
+</div>
             <div
-              className="w-[50%] h-[100%] max-sm:h-[50%] max-sm:w-[100%] flex justify-center items-center"
-              style={{
-                backgroundImage: `url(${image3})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="text-[#FFFFFF] font-regular text-[18px] font-raleway underline">
-                SEE MORE
-              </div>
-            </div>
-            <div
-              className="w-[50%] h-[100%] max-sm:h-[50%] max-sm:w-[100%]"
+              className="w-[50%] h-[100%] max-sm:h-[50%] cursor-pointer max-sm:w-[100%] flex justify-center items-center relative group"
               style={{
                 backgroundImage: `url(${image4})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-            ></div>
+              onClick={() => window.open("https://www.instagram.com/cemento.lime/", "_blank")}
+            >
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+{/* SEE MORE Text */}
+<div className="text-[#FFFFFF] font-regular text-[18px] font-raleway underline opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+  SEE MORE
+</div>
+            </div>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ function HomePage() {
       <CraftsSection />
       {/* <TestimonialSection /> */}
       <ContactUs />
-      <FAQSection />
+      {/* <FAQSection /> */}
     </div>
   );
 }
