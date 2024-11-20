@@ -21,7 +21,7 @@ const Experience = () => {
         </div>
         <div className="flex max-sm:w-full gap-[75px] h-[380px]   max-md:flex-col max-md:h-full max-md:w-[93.6%] ">
           <div
-            className="flex gap-[17px] bg-[#FFFFFF] hover:bg-[#214A3E] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group "
+            className="flex gap-[17px] bg-[#FFFFFF] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group "
             style={{
               boxShadow: "0px 0px 5.8px rgba(0, 0, 0, 0.54)",
             }}
@@ -30,17 +30,17 @@ const Experience = () => {
               <img src={image1} className="w-[103px] h-[103px]" />
             </div>
             <div className="flex gap-[17px] w-[81.14%] max-md:w-[92.71%] flex-col max-sm:w-[86.46%]">
-              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] ">
                 Long-Life projects
               </div>
-              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%] ">
                 Short text describing one of your product or service advantages.
                 Try being creative.
               </div>
             </div>
           </div>
           <div
-            className="flex gap-[17px] bg-[#FFFFFF] hover:bg-[#214A3E] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group"
+            className="flex gap-[17px] bg-[#FFFFFF] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group"
             style={{
               boxShadow: "0px 0px 5.8px rgba(0, 0, 0, 0.54)",
             }}
@@ -49,17 +49,17 @@ const Experience = () => {
               <img src={image3} className="w-[103px] h-[103px]" />
             </div>
             <div className="flex gap-[17px] w-[81.14%] max-md:w-[92.71%] flex-col max-sm:w-[86.46%]">
-              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] ">
                 Shipping Address
               </div>
-              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%]">
                 Short text describing one of your product or service advantages.
                 Try being creative.
               </div>
             </div>
           </div>
           <div
-            className="flex gap-[17px] bg-[#FFFFFF] hover:bg-[#214A3E] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group"
+            className="flex gap-[17px] bg-[#FFFFFF] w-full rounded-[10px] max-md:h-[289px] justify-center items-center flex-col group"
             style={{
               boxShadow: "0px 0px 5.8px rgba(0, 0, 0, 0.54)",
             }}
@@ -68,10 +68,10 @@ const Experience = () => {
               <img src={image2} className="w-[103px] h-[103px]" />
             </div>
             <div className="flex gap-[17px] w-[81.14%] max-md:w-[92.71%] flex-col max-sm:w-[86.46%]">
-              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[32px] font-bold text-[#000000] leading-[150%] ">
                 Affordable Prices
               </div>
-              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%] group-hover:text-[#FFFFFF]">
+              <div className="font-raleway text-[17px] font-light text-[#000000] leading-[150%]">
                 Short text describing one of your product or service advantages.
                 Try being creative.
               </div>

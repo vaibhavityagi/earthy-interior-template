@@ -46,40 +46,96 @@ const CraftsSection = () => {
             <div className=" h-[50%]  w-full flex flex-row justify-center gap-[36px] max-xmd:gap-[33px] ">
               <div
                 style={{ backgroundImage: `url(${image2})` }}
-                className="w-[66%] h-full  bg-cover bg-center  h-[100%] "
+                className="w-[66%] relative h-full cursor-pointer bg-cover bg-center  h-[100%] flex justify-center items-center group"
                 aria-label="Craft 2"
-              ></div>
-              <div
-                style={{ backgroundImage: `url(${image1})` }}
-                className="w-[33%] h-full  bg-cover bg-center  h-[100%] "
-                aria-label="Craft 1"
-              ></div>
-            </div>
-
-            {/* Right column - Two images stacked */}
-            <div className="w-full flex flex-row justify-center gap-[36px]   max-xmd:gap-[33px] h-[50%] ">
-              <div
-                style={{ backgroundImage: `url(${image4})` }}
-                className="w-[33%] h-full  bg-cover bg-center  h-[100%] "
-                aria-label="Craft 4"
-              ></div>
-
-              <div
-                style={{ backgroundImage: `url(${image3})` }}
-                className="relative w-[66%] h-full bg-cover bg-center h-[100%] flex justify-center items-center"
-                aria-label="Craft 3"
+                onClick={() => {
+                  navigate("/products");
+                  window.scrollTo(0, 0); // Scrolls to the top of the page
+                }}
               >
-                {/* Flex container for centering the button */}
-                {/* <div className="absolute inset-0 flex items-center justify-center"> */}
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Show More Button */}
                 <div
-                  className="max-md:text-[15px] text-white text-[36px] underline  max-635px:text-[12px] cursor-pointer font-raleway"
+                  className="max-md:text-[15px] text-white text-[36px] underline max-635px:text-[12px] cursor-pointer font-raleway opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
                   onClick={() => {
                     navigate("/products");
                     window.scrollTo(0, 0); // Scrolls to the top of the page
                   }}
                 >
                   Show More
-                  {/* </div> */}
+                </div>
+              </div>
+              <div
+                style={{ backgroundImage: `url(${image1})` }}
+                className="relative w-[33%] h-full  bg-cover bg-center cursor-pointer h-[100%] flex justify-center items-center group"
+                aria-label="Craft 1"
+                onClick={() => {
+                  navigate("/products");
+                  window.scrollTo(0, 0); // Scrolls to the top of the page
+                }}
+              >
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Show More Button */}
+                <div
+                  className="max-md:text-[15px] text-white text-[36px] underline max-635px:text-[12px] cursor-pointer font-raleway opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  onClick={() => {
+                    navigate("/products");
+                    window.scrollTo(0, 0); // Scrolls to the top of the page
+                  }}
+                >
+                  Show More
+                </div>
+              </div>
+            </div>
+
+            {/* Right column - Two images stacked */}
+            <div className="w-full flex flex-row justify-center gap-[36px]   max-xmd:gap-[33px] h-[50%] ">
+              <div
+                style={{ backgroundImage: `url(${image4})` }}
+                className="relative w-[33%] h-full  bg-cover bg-center cursor-pointer  h-[100%] flex justify-center items-center group"
+                aria-label="Craft 4"
+                onClick={() => {
+                  navigate("/products");
+                  window.scrollTo(0, 0); // Scrolls to the top of the page
+                }}
+              >
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Show More Button */}
+                <div
+                  className="max-md:text-[15px] text-white text-[36px] underline max-635px:text-[12px] cursor-pointer font-raleway opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  onClick={() => {
+                    navigate("/products");
+                    window.scrollTo(0, 0); // Scrolls to the top of the page
+                  }}
+                >
+                  Show More
+                </div>
+              </div>
+
+              <div
+                style={{ backgroundImage: `url(${image3})` }}
+                className="relative w-[66%] h-full bg-cover cursor-pointer bg-center flex justify-center items-center group"
+                aria-label="Craft 3"
+                onClick={() => {
+                  navigate("/products");
+                  window.scrollTo(0, 0); // Scrolls to the top of the page
+                }}
+              >
+                {/* Translucent Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Show More Button */}
+                <div
+                  className="max-md:text-[15px] text-white text-[36px] underline max-635px:text-[12px] cursor-pointer font-raleway opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  onClick={() => {
+                    navigate("/products");
+                    window.scrollTo(0, 0); // Scrolls to the top of the page
+                  }}
+                >
+                  Show More
                 </div>
               </div>
             </div>

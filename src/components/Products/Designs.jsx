@@ -434,14 +434,14 @@ const Designs = () => {
             // onClick={handleCloseModal}
           >
             <div
-              className="bg-[#031602] p-4 rounded-lg h-[842px] w-[595px] flex items-center justify-between flex-col"
+              className="bg-[#031602] p-4 rounded-lg h-[700px] w-[595px] flex items-center justify-between flex-col"
               onClick={(e) => e.stopPropagation()}
               ref={modalRef}
             >
               <img
                 src={selectedModal.image}
                 alt="Design preview"
-                className="w-[533px] h-[363px]"
+                className="w-[533px] h-[300px]"
               />
               <div className="w-[500px]">
                 <div className="font-raleway text-[40px] tracking-[8%] leading-[60px] text-white font-light">
@@ -456,7 +456,7 @@ const Designs = () => {
                  {selectedModal.desc2}
                 </div>
               </div>
-              <div className="flex  w-[509px] h-[150px] justify-between">
+              <div className="flex  w-[509px] justify-between">
                 <div className="w-[92px] h-[111px] flex flex-col justify-between">
                   <img src={cir1} className="w-[45px] h-[45px]" />
                   <div className="font-raleway text-[10px] leading-[11.74px] tracking-[8%] text-white font-bold">
