@@ -54,12 +54,11 @@ const ContactForm = () => {
       <div className=" w-[73.63%] max-md:w-[96.22%] h-[993px] max-sm:h-full  max-sm:w-[84.47%] flex flex-col justify-between max-sm:justify-start max-sm:gap-[50px]  ">
         <div className="flex w-full items-center flex-col gap-[19px] max-sm:gap-[28px] ">
           <div className="font-raleway font-bold text-center text-[36px] max-sm:text-[32px] ">
-            Get In Touch With Us
+            Let's Create Something Beautiful Together
           </div>
           <div className="font-raleway text-[16px] font-light text-[#9F9F9F] max-w-[644px] leading-[120%] text-center">
-            For More Information About Our Product & Services. Please Feel Free
-            To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
-            Not Hesitate!
+            Share your ideas, requirements, or inspirations with us. Our team will guide you through textures, tones,
+            and solutions that bring nature’s quiet elegance into your space.{" "}
           </div>
         </div>
         <div className="flex gap-[30px] max-sm:gap-[70px] max-sm:flex-col items-center">
@@ -136,12 +135,8 @@ const ContactForm = () => {
                   <img src={location} className="w-full h-full" />
                 </div>
                 <div className="flex flex-col   ">
-                  <div className="font-raleway font-semibold text-[24px] ">
-                    Address
-                  </div>
-                  <div className="font-raleway text-[16px] font-light">
-                    Address
-                  </div>
+                  <div className="font-raleway font-semibold text-[24px] ">Address</div>
+                  <div className="font-raleway text-[16px] font-light">Address</div>
                 </div>
               </div>
               <div className="flex gap-[25px]">
@@ -149,9 +144,7 @@ const ContactForm = () => {
                   <img src={phone} className="w-full h-full" />
                 </div>
                 <div className="flex flex-col ">
-                  <div className="font-raleway font-semibold text-[24px] ">
-                    Phone
-                  </div>
+                  <div className="font-raleway font-semibold text-[24px] ">Phone</div>
                   <div className="font-roboto text-[20px] max-sm:text-[16px]  font-light max-zsm:text-[2.9vw]">
                     +91 9580682537
                   </div>
@@ -162,12 +155,9 @@ const ContactForm = () => {
                 <img src={clock} className="w-[23px] h-[23px] mt-2" />
                 {/* </div> */}
                 <div className="flex flex-col ">
-                  <div className="font-raleway font-semibold text-[24px] ">
-                    Working Time
-                  </div>
+                  <div className="font-raleway font-semibold text-[24px] ">Working Time</div>
                   <div className="font-raleway text-[16px] max-sm:text-[16px] font-light max-zsm:text-[3vw]">
-                    Monday-Friday: 9:00 - 22:00 <br /> Saturday-Sunday: 9:00 -
-                    21:00
+                    Monday-Friday: 9:00 - 22:00 <br /> Saturday-Sunday: 9:00 - 21:00
                   </div>
                 </div>
               </div>

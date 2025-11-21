@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../assets/AboutUs/banner.png";
+import banner from "../../assets/AboutUs/subscription.png";
 
 const Subscribe = () => {
   return (
@@ -13,9 +13,9 @@ const Subscribe = () => {
       }}
     >
       <div className="flex items-center max-sm:flex-col w-full max-sm:gap-[32px]">
-        <div className="font-raleway max-w-[570px] max-md:max-w-[262px] w-full text-[32px] text-[#FFFFFF] leading-[150%] max-md:text-[16px] max-sm:text-[20px] max-sm:max-w-[349px]">
-          <span className="font-bold italic">Enter your email</span> address for
-          our mailing Promo or other interesting things
+        <div className="font-raleway max-w-[570px] max-md:max-w-[262px] w-full text-[24wwpx]  text-[#FFFFFF] leading-[150%] max-md:text-[16px] max-sm:text-[20px] max-sm:max-w-[349px]">
+          <span className="font-bold italic text-[32px]">Join Our Mailing List</span> to Receive updates on new
+          textures, project inspirations, and exclusive Claymist insights
         </div>
         <form className="flex gap-[25px] amx-sm:gap-[32px] max-sm:flex-col w-full justify-end max-sm:items-center ">
           <input

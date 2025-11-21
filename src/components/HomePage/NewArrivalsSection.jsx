@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/HomePage/rectangle.png";
+import image from "../../assets/HomePage/new_arrival.png";
 import { useNavigate } from "react-router-dom";
 const NewArrivalsSection = () => {
   const navigate = useNavigate();
@@ -19,14 +19,9 @@ const NewArrivalsSection = () => {
           {/* Line */}
           <div className="w-[64px] h-[2px] bg-white mr-3"></div>
           {/* New Arrivals Text */}
-          <p className="uppercase font-raleway tracking-widest font-bold text-[14px]">
-            New Arrivals
-          </p>
+          <p className="uppercase font-raleway tracking-widest font-bold text-[14px]">New Arrivals</p>
         </div>
-        <h1 className="text-[48px] font-raleway font-bold leading-[109%] text-left">
-          Everything you <br /> need for your{" "}
-          <span className="italic">interiors</span>
-        </h1>
+        <h1 className="text-[48px] font-raleway font-bold leading-[109%] text-left">Discover the latest clay</h1>
 
         {/* Button with Arrow */}
         <button

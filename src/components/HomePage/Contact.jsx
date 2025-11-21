@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import image from "../../assets/HomePage/rectangle-47.png";
+import image from "../../assets/HomePage/contact_image.png";
 import emailjs from "emailjs-com";
 const ContactUs = () => {
-  const [showMsg, setShowMsg] = useState(false)
+  const [showMsg, setShowMsg] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     number: "",
@@ -15,7 +15,7 @@ const ContactUs = () => {
   };
   const sendData = () => {
     setShowMsg(true);
-          setFormData({ name: "", number: "",  message: "" });
+    setFormData({ name: "", number: "", message: "" });
     // emailjs
     //   .send(
     //     "YOUR_SERVICE_ID",
@@ -55,14 +55,11 @@ const ContactUs = () => {
           </div>
 
           <h1 className="text-[54px] font-raleway font-bold text-[#000000] leading-[62px] max-md:text-[32px] max-xmd:text-[36px] max-xmd:leading-[120%]">
-            Let’s Create{" "}
-            <span className="text-[#214A3E] italic">Something Great</span>{" "}
-            Together
+            Let's Create <span className="text-[#214A3E] italic">Something Great</span> Together
           </h1>
           <p className="text-[18px] font-raleway font-light text-[#444444] text-left max-md:text-[12px] max-md:leading-[120%]">
-            Lorem ipsum tempor dolor elementum tellus non ipsum faucibus. Justo,
-            magna mauris posuere auctor justo. Habitant proin aliquet volutpat
-            leo ultricies.
+            Share your ideas, requirements, or inspirations with us. Our team will guide you through textures, tones,
+            and solutions that bring nature's quiet elegance into your space.
           </p>
 
           {/* Form */}
@@ -77,7 +74,7 @@ const ContactUs = () => {
                 className="w-full max-w-[278px] max-md:h-[49px] placeholder-[#8FA49E] font-raleway placeholder-text-[18px] max-md:text-[14px] h-[57px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
               <input
-              type="number"
+                type="number"
                 name="number"
                 value={formData.number}
                 onChange={handleChange}
@@ -86,14 +83,18 @@ const ContactUs = () => {
               />
             </div>
             <div>
-            <textarea
-            name="message"
-            value={formData.message}
-              placeholder="Enter Your Message"
-              onChange={handleChange}
-              className="w-full max-w-[587px] h-[144px] placeholder-[#8FA49E] max-md:h-[99px] font-raleway placeholder-text-[18px] max-md:text-[14px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-            {showMsg && <div className="font-raleway font-bold text-[#8FA49E] text-[18px] max-md:text-[14px]">Your Message has been sent Successfully!</div>}
+              <textarea
+                name="message"
+                value={formData.message}
+                placeholder="Enter Your Message"
+                onChange={handleChange}
+                className="w-full max-w-[587px] h-[144px] placeholder-[#8FA49E] max-md:h-[99px] font-raleway placeholder-text-[18px] max-md:text-[14px] p-3 bg-[#E5EDE466] border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              {showMsg && (
+                <div className="font-raleway font-bold text-[#8FA49E] text-[18px] max-md:text-[14px]">
+                  Your Message has been sent Successfully!
+                </div>
+              )}
             </div>
             <button
               type="submit"
@@ -110,11 +111,7 @@ const ContactUs = () => {
 
         {/* Right Side - Image Section */}
         <div className=" max-w-[538px] h-[666px] flex justify-center max-md:w-[309px] max-md:h-[532px] max-ymd:hidden">
-          <img
-            src={image}
-            alt="Decorative Image"
-            className=" object-cover  shadow-lg"
-          />
+          <img src={image} alt="Decorative Image" className=" object-cover  shadow-lg" />
         </div>
       </div>
     </section>

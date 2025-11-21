@@ -8,25 +8,25 @@ const materials = [
     id: 1,
     title: "WATTLE AND DOB",
     description:
-      "Perfect for creating durable, natural, and earthen structures that harmonize with the environment.",
+      "Claymist plasters bond naturally with wattle and daub, enhancing its earth-based composition while adding strength, breathability, and a refined aesthetic finish.",
   },
   {
     id: 2,
     title: "AAC BLOCKS",
     description:
-      "Perfect for creating durable, natural, and earthen structures that harmonize with the environment.",
+      "Our lime and clay-based finishes adhere exceptionally well to AAC blocks, providing a smooth, durable, and moisture-regulating surface ideal for modern construction.",
   },
   {
     id: 3,
     title: "COB/RAMMED COB",
     description:
-      "Perfect for creating durable, natural, and earthen structures that harmonize with the environment.",
+      "Claymist works harmoniously with cob structures. The breathable nature of our plasters maintains the integrity of the material while elevating the overall look with a clean, timeless finish.",
   },
   {
     id: 4,
     title: "MDF/HDHMR BOARDS",
     description:
-      "Perfect for creating durable, natural, and earthen structures that harmonize with the environment.",
+      "Specially prepared formulations allow Claymist finishes to bond effectively with engineered boards, creating elegant surfaces perfect for cabinetry, wall panels, and custom interior elements.",
   },
 ];
 
@@ -37,7 +37,7 @@ const Area = () => {
     setExpandedId(expandedId === id ? null : id);
   };
   return (
-    <section className="flex items-center w-full px-[72px] max-sm:px-[31px] py-[100px]" >
+    <section className="flex items-center w-full px-[72px] max-sm:px-[31px] py-[100px]">
       <div className=" flex items-center w-full gap-[34px] max-sm:gap-[32px] max-md:flex-col ">
         <div className="max-w-[644px] flex  flex-col gap-[54px] w-full max-sm:gap-[32px] max-h-[595px] h-full ">
           <div className="flex flex-col gap-[26px]">
@@ -49,16 +49,12 @@ const Area = () => {
             </div>
 
             <h1 className="text-[54px] font-raleway font-bold text-[#000000] leading-[62px]  max-sm:text-[36px] max-sm:leading-[120%]">
-              <span className="text-[#214A3E] italic">
-                {" "}
-                Versatile Solutions
-              </span>{" "}
-              for Every Build
+              <span className="text-[#214A3E] italic"> Versatile Solutions</span> for Every Build
             </h1>
           </div>
           <p className="text-[24px] font-raleway font-light text-[#444444] text-left max-w-[510px] leading-[120%] max-sm:text-[16px] max-sm:leading-[120%] max-sm:tracking-[5%]">
-            From traditional materials to modern innovations, Cementolime adapts
-            to a wide range of surfaces.
+            From traditional structures to contemporary innovations, Claymist finishes adapt seamlessly to a wide range
+            of surfaces.{" "}
           </p>
 
           <button
@@ -113,17 +109,12 @@ const Area = () => {
               <div className="flex justify-between items-center text-[#214A3E] font-raleway text-[24px] leading-[120%] max-sm:text-[16px]">
                 0{index + 1} {material.title}
                 <div className="w-[36px] cursor-pointer rounded-[18px] h-[36px] flex justify-center items-center bg-[#DCDFE3]">
-                  <img
-                    src={expandedId === material.id ? cross : plus}
-                    className="w-[12px] h-[12px]"
-                  />
+                  <img src={expandedId === material.id ? cross : plus} className="w-[12px] h-[12px]" />
                 </div>
               </div>
               <div
                 className={`overflow-hidden transition-max-height duration-300 ease-in ${
-                  expandedId === material.id
-                    ? "max-h-[500px] mt-[30px]"
-                    : "max-h-0"
+                  expandedId === material.id ? "max-h-[500px] mt-[30px]" : "max-h-0"
                 }`}
               >
                 {expandedId === material.id && material.description && (

@@ -16,10 +16,7 @@ const Services = () => {
           </div>
 
           <h1 className="text-[64px] w-full max-md:text-[48px] font-raleway font-bold text-[#000000] leading-[72px] max-sm:text-[36px] max-sm:leading-[150%] ">
-            We provide the best{" "}
-            <span className="text-[#214A3E] italic">
-              eco - friendly solutions
-            </span>{" "}
+            We provide the finest <span className="text-[#214A3E] italic">eco-friendly surface solutions</span>{" "}
           </h1>
 
           {/* Form */}
@@ -34,8 +31,9 @@ const Services = () => {
                 Architectural & Interior design
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">
-                Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                nunc, molestie volutpat ipsum, ultricies.
+                We collaborate with architects and designers to create spaces that feel grounded, elegant, and naturally
+                textured. From bespoke wall finishes to curated material palettes, we bring your design vision to life
+                with refined craftsmanship.
               </div>
             </div>
           </div>
@@ -48,8 +46,8 @@ const Services = () => {
                 Building Renovation
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">
-                Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                nunc, molestie volutpat ipsum, ultricies.
+                Enhance existing structures with breathable, durable, and timeless finishes. Our eco-friendly materials
+                uplift older spaces while maintaining structural integrity and improving air quality.{" "}
               </div>
             </div>
           </div>
@@ -62,8 +60,9 @@ const Services = () => {
                 Construction Management
               </div>
               <div className="font-raleway text-[18px] max-md:text-[12px] max-md:leading-[18px] font-light text-[#758195] leading-[32px]">
-                Non diam pretium tristique augue placerat dolor. Accumsan nibh
-                nunc, molestie volutpat ipsum, ultricies.
+                From planning to execution, we ensure every layer is applied with precision and care. Our team oversees
+                the process end-to-end, maintaining the highest standards of sustainability, performance, and
+                aesthetics.{" "}
               </div>
             </div>
           </div>

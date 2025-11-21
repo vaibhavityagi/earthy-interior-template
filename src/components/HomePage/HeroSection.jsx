@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import image1 from "../../assets/HomePage/1.png";
-import image2 from "../../assets/HomePage/frame2.png";
-import image3 from "../../assets/HomePage/frame3.png";
+import image1 from "../../assets/HomePage/carousel_1.png";
+import image2 from "../../assets/HomePage/carousel_2.png";
+import image3 from "../../assets/HomePage/carousel_3.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
@@ -43,20 +43,16 @@ const HeroSection = () => {
         // backgroundPosition:"center"
       }}
     >
-      <div
-    className="absolute inset-0 bg-black opacity-30"
-    style={{ zIndex: 1 }}
-  ></div>
+      <div className="absolute inset-0 bg-black opacity-30" style={{ zIndex: 1 }}></div>
       <div className="w-[1228px] flex flex-col items-center justify-center gap-[180px]">
         <div className="relative z-10 flex flex-col justify-center items-center h-full gap-[25px] text-center px-4">
           <h1 className="text-[64px] font-raleway font-bold text-white text-center leading-[120%] max-md:text-[32px] max-sm:text-[24px]">
-            Bring <span className="italic">Serenity</span> to your place with
-            Cementolime
+            Where Clay Meets Calm
           </h1>
           <p className="text-[24px] font-raleway text-white max-md:text-[20px] max-sm:text-[12px]">
-            Find your dream interior for your home decoration with us,
+            Natural textures and handcrafted finishes that bring,
             <br />
-            and we will make it happen.
+            warmth, softness, and timeless beauty into your spaces.
           </p>
 
           <button
@@ -68,7 +64,7 @@ const HeroSection = () => {
               window.scrollTo(0, 0); // Scrolls to the top of the page
             }}
           >
-            Explore Our Collection
+            Explore Finishes
             <span className="w-[57px] max-sm:w-[40px] h-[1px] bg-white inline-block relative">
               <span className="absolute right-0 top-[-3px] border-t-[2px] border-r-[2px] border-white w-2 h-2 rotate-45"></span>
             </span>
@@ -82,9 +78,7 @@ const HeroSection = () => {
               key={index}
               onClick={() => handleDotClick(index)}
               className={`w-[60px] cursor-pointer h-[9px] rounded-full ${
-                index === currentImageIndex
-                  ? "bg-white"
-                  : "bg-[#FFFFFF] opacity-[52%]"
+                index === currentImageIndex ? "bg-white" : "bg-[#FFFFFF] opacity-[52%]"
               }`}
             ></div>
           ))}

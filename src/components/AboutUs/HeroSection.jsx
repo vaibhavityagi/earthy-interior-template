@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/AboutUs/hero-image.png";
+import image from "../../assets/AboutUs/hero.png";
 import image1 from "../../assets/AboutUs/Vector.png";
 
 const HeroSections = () => {
@@ -15,8 +15,7 @@ const HeroSections = () => {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="bg-[#0F0F0F] bg-opacity-[33%] max-w-[772px] max-md:max-w-[598px] max-sm:max-w-[395px] max-sm:text-[30px] max-md:text-[48px] px-[33px] py-[25px] font-raleway text-center text-[64px] leading-[120%] text-[#FFFEF6] font-bold">
-        <span className="italic">Luxury Finishes</span> that Stand the Test of
-        Time
+        Crafting Timeless Spaces with Natural Elegance
       </div>
       <div
         className="text-[20px] flex flex-col cursor-pointer h-[238px] max-sm:h-[320px] items-center justify-center font-roboto leading-[32px] text-[#BDBDBD]"

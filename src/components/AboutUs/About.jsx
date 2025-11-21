@@ -1,6 +1,5 @@
-import React from "react";
-import image1 from "../../assets/AboutUs/Image1.png";
-import image2 from "../../assets/AboutUs/Image2.png";
+import image1 from "../../assets/AboutUs/who_we_are_1.png";
+import image2 from "../../assets/AboutUs/who_we_are_2.png";
 
 const About = () => {
   return (
@@ -16,19 +15,18 @@ const About = () => {
             </div>
 
             <h1 className="text-[64px] w-full   font-raleway font-bold text-[#000000] leading-[72px] max-xsm:leading-[43px] max-md:text-[48px] max-xsm:text-[36px]  ">
-              We help to bring your{" "}
-              <span className="text-[#214A3E] italic">vision to reality</span>{" "}
+              We help bring your <span className="text-[#214A3E] italic">vision to life</span>{" "}
             </h1>
             <p className="text-[18px] font-raleway leading-[32px] font-light text-[#444444] text-left max-xsm:text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
-              fringilla dui amet faucibus nam. Erat id laoreet posuere etiam
-              morbi.
+              Every space begins with a feeling — a mood, a moment, a vision of how you want to live. At Claymist, we
+              translate that vision into refined surfaces and natural textures that elevate your environment with
+              warmth, depth, and timeless character.{" "}
             </p>
             <p className="text-[18px] font-raleway leading-[32px] font-light text-[#444444] text-left max-xsm:text-[14px]">
-              Tempor dolor elementum tellus non ipsum faucibus. Justo, magna
-              mauris posuere auctor justo. Habitant proin aliquet volutpat leo
-              ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc.
-              Faucibus sit odio bibendum lobortis diam.
+              Our approach blends craftsmanship with modern design. From soft clay-plastered walls to breathable lime
+              finishes, every layer is applied with intention, ensuring durability, beauty, and harmony with nature.
+              Whether you're refreshing a single room or designing an entire home, we work closely with you to craft
+              spaces that feel calm, grounded, and effortlessly elegant.{" "}
             </p>
           </div>
 

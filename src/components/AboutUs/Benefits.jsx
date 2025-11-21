@@ -1,5 +1,3 @@
-import React from "react";
-import benefit from "../../assets/AboutUs/benefits.png";
 import benefits1 from "../../assets/AboutUs/benefits1.png";
 import benefits2 from "../../assets/AboutUs/benefits2.png";
 import benefits3 from "../../assets/AboutUs/benefits3.png";
@@ -12,8 +10,8 @@ const Benefits = () => {
         Why Choose Us?
       </div>
       <div className="text-[24px] max-md:text-[20px] max-sm:text-[14px] max-md:w-[60%] max-sm:w-[82%] font-roboto text-[#8FA49E] w-[62%] text-center leading-[120%] tracking-[5%]">
-        Lorem ipsum Crafted From Natural Limestone, Our Plaster Eventually
-        Returns To The Earth, Leaving No Trace Behind.
+        Crafted from pure, natural limestone, our finishes age gracefully and eventually return to the earth—leaving
+        behind nothing but beauty.
       </div>
       {/* <div className="w-[50%] bg-green-900   max-md:hidden">
         <img src={benefit} className="w-full h-full "/>
@@ -24,12 +22,10 @@ const Benefits = () => {
             <div className="w-[50%] shadow-lg max-sm:w-[100%] max-sm:h-[50%] bg-[#FFFFFF] px-[24px] flex flex-col justify-center py-[46px]">
               <div className=" flex gap-[20px] max-md:gap-[28px] flex-col h-full max-sm:items-center ">
                 <img src={benefits1} className="w-[76px] h-[80px]" />
-                <div className="font-raleway text-[32px] font-bold text-[#285A43] leading-[140%] ">
-                  Quality Product
-                </div>
+                <div className="font-raleway text-[32px] font-bold text-[#285A43] leading-[140%] ">Quality Product</div>
                 <div className="font-raleway text-[20px] font-light text-[#8490A1] leading-[150%] max-sm:leading-[24px] max-sm:text-center ">
-                  Our Lime Plaster Breathes Like Living Skin. Reducing Moisture
-                  And Absorbing CO2 For a Healthier. More Comfortable Home
+                  Our lime plasters breathe naturally, regulating moisture and creating healthier, more comfortable
+                  interiors. Each finish is rich in texture, durable in form, and crafted to stand the test of time.{" "}
                 </div>
               </div>
             </div>
@@ -40,8 +36,8 @@ const Benefits = () => {
                   Breathable & Absorbs CO2
                 </div>
                 <div className="font-raleway text-[20px] font-light text-[#8490A1] max-sm:text-center leading-[120%] max-sm:leading-[24px]">
-                  Our Lime Plaster Breathes Like Living Skin. Reducing Moisture
-                  And Absorbing CO2 For a Healthier. More Comfortable Home
+                  Claymist finishes work in harmony with the environment. As they cure, they absorb carbon dioxide and
+                  contribute to cleaner indoor air—making your home feel fresher, lighter, and more alive.{" "}
                 </div>
               </div>
             </div>
@@ -50,32 +46,23 @@ const Benefits = () => {
             {/* <div className=" flex h-[50%] max-sm:block"> */}
             <div className="w-[100%] shadow-lg max-md:w-[50%] max-sm:w-[100%] max-sm:h-[50%] h-[100%] bg-[#FFFFFF] px-[24px] flex flex-col justify-center py-[46px]">
               <div className="flex gap-[20px] max-md:gap-[10px] flex-col h-full max-sm:items-center">
-                <img
-                  src={benefits3}
-                  className="w-[86px] h-[76px] max-md:w-[70px] max-md:h-[61px]"
-                />
-                <div className="font-raleway text-[32px] font-bold text-[#285A43] leading-[140%]">
-                  Bio - degradable
-                </div>
+                <img src={benefits3} className="w-[86px] h-[76px] max-md:w-[70px] max-md:h-[61px]" />
+                <div className="font-raleway text-[32px] font-bold text-[#285A43] leading-[140%]">Biodegradable</div>
                 <div className="font-raleway text-[20px] font-light text-[#8490A1] max-sm:text-center leading-[120%] max-sm:leading-[24px] ">
-                  Crafted From Natural Limestone, Our Plaster Eventually Returns
-                  To The Earth, Leaving No Trace Behind.
+                  Made from natural limestone and earth-based materials, our finishes return to the soil without leaving
+                  behind waste or toxins—preserving the purity of the environment.{" "}
                 </div>
               </div>
             </div>
             <div className="w-[50%] hidden max-md:flex shadow-lg max-sm:w-[100%] max-sm:h-[50%] h-[100%] bg-[#FFFFFF] px-[24px] flex-col justify-center py-[46px]">
               <div className="flex gap-[20px] max-md:gap-[10px] max-sm:items-center flex-col h-full">
-                <img
-                  src={benefits4}
-                  className="w-[86px] h-[76px] max-md:w-[70px] max-md:h-[61px]"
-                />
+                <img src={benefits4} className="w-[86px] h-[76px] max-md:w-[70px] max-md:h-[61px]" />
                 <div className="font-raleway text-[32px] max-sm:text-center font-bold text-[#285A43] leading-[140%]">
                   Zero Carbon Product
                 </div>
                 <div className="font-raleway text-[20px] font-light text-[#8490A1] max-sm:text-center leading-[120%] max-sm:leading-[24px]">
-                  During Production. Any CO2 Released Is Reabsorbed As The
-                  Plaster Cures, Making It A Sustainable Choice For A Greener
-                  Future.
+                  Any CO₂ released during production is reabsorbed during curing, creating a closed, sustainable cycle.
+                  A responsible choice today, and a thoughtful investment in the future.{" "}
                 </div>
               </div>
             </div>
@@ -89,8 +76,8 @@ const Benefits = () => {
               Zero Carbon Product
             </div>
             <div className="font-raleway text-[20px] font-light text-[#8490A1] leading-[120%] max-sm:text-[12px] ">
-              During Production. Any CO2 Released Is Reabsorbed As The Plaster
-              Cures, Making It A Sustainable Choice For A Greener Future.
+              During Production. Any CO2 Released Is Reabsorbed As The Plaster Cures, Making It A Sustainable Choice For
+              A Greener Future.
             </div>
           </div>
         </div>

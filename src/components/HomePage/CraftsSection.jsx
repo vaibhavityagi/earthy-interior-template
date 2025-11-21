@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import image1 from "../../assets/HomePage/11.png";
-import image2 from "../../assets/HomePage/22.png";
-import image3 from "../../assets/HomePage/33.png";
-import image4 from "../../assets/HomePage/44.png";
+import image1 from "../../assets/HomePage/recent_work_1.png";
+import image2 from "../../assets/HomePage/recent_work_2.png";
+import image3 from "../../assets/HomePage/recent_work_3.png";
+import image4 from "../../assets/HomePage/recent_work_4.png";
 const CraftsSection = () => {
   const navigate = useNavigate();
   return (
@@ -13,30 +13,24 @@ const CraftsSection = () => {
           <div className="flex flex-col w-[546px] gap-[9px]">
             <div className="flex items-center ">
               <div className="w-[64px] h-[2px] bg-[#8FA49E] max-ssm:w-[22px]"></div>
-              <h2 className="text-[14px] font-raleway uppercase tracking-wider text-[#8FA49E] ml-3">
-                Recent works
-              </h2>
+              <h2 className="text-[14px] font-raleway uppercase tracking-wider text-[#8FA49E] ml-3">Recent works</h2>
             </div>
             <h2 className="text-[60px] font-bold font-raleway text-left leading-[72px] max-ymd:text-[40px] max-xmd:text-[48px] max-sm:text-[24px] max-xmd:leading-[120%]">
-              Some of <span className="text-[#214A3E] italic">our crafts</span>{" "}
-              <br />
-              made with love
+              Recent Crafts Made with Care
             </h2>
           </div>
           <div className="">
             {/* Line */}
             <p className="text-[#8490A1] max-md:hidden font-raleway max-w-[581px] w-full text-[24px] text-right leading-[28px] max-xmd:text-[16px] max-md:text-[15px] max-xmd:leading-[150%] max-xmd:max-w-[461px] max-md:max-w-[244px] max-635px:text-[12px] max-xmd:leading-[120%] max-sm:max-w-[158px] max-635px:hidden">
-              We’ve designed and curated pieces that are a cut above your
-              average home goods, because when you level up your everyday
-              objects, you elevate your daily rituals. Let the magic happen.
+              At Claymist, every space is crafted with intention.
             </p>
             <p className="text-[#8490A1] font-raleway hidden max-md:block w-screen text-right leading-[28px] max-md:text-[15px] max-xmd:leading-[150%] max-md:max-w-[244px] max-635px:text-[12px] max-635px:hidden">
-              We’ve designed and curated pieces that are a cut above your
-              average home goods, because when you level up
+              From soft clay-plastered walls to natural timber textures, our recent works reflect a quiet elegance that
+              elevates the everyday. Each project blends modern simplicity with earthy warmth—designed to make your
+              rituals feel calmer, slower, and more meaningful.{" "}
             </p>
             <p className="text-[#8490A1] font-raleway hidden w-full text-[24px] text-right max-635px:text-[12px] max-sm:leading-[120%] max-635px:w-[158px] max-635px:block">
-              Our innovative finishes, from polished plasters to limewash,
-              combine luxury and sustainability,
+              Let the craftsmanship speak for itself.{" "}
             </p>
           </div>
         </div>

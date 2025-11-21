@@ -1,5 +1,5 @@
 import { useState } from "react";
-import image from "../assets/HomePage/LOGO.svg";
+import image from "../assets/HomePage/brand_logo.png";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,16 +12,13 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-[#214A3E] flex justify-center items-center h-[90px] w-[100%]">
+      <nav className="bg-[#002D24] flex justify-center items-center h-[90px] w-[100%]">
         {/* Logo */}
         <div className="flex justify-between cursor-pointer items-center w-[90%] max-xmd:w-[95%]">
-          <img src={image} className="h-[21px]" onClick={() => navigate("/")} />
+          <img src={image} className="h-[85px]" onClick={() => navigate("/")} />
 
           {/* Hamburger Icon */}
-          <div
-            className="flex flex-col space-y-1 cursor-pointer hidden max-zmd:flex"
-            onClick={toggleMenu}
-          >
+          <div className="flex flex-col space-y-1 cursor-pointer hidden max-zmd:flex" onClick={toggleMenu}>
             <span
               className={`block w-8 h-1 bg-white transition-transform duration-300 ${
                 isMenuOpen ? "rotate-45 translate-y-1.5" : ""
@@ -44,9 +41,7 @@ const Navbar = () => {
               className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
               onClick={() => navigate("/")}
             >
-              <li className="text-white cursor-pointer text-[20px] text-center">
-                Home
-              </li>
+              <li className="text-white cursor-pointer text-[20px] text-center">Home</li>
             </div>
             <div
               className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
@@ -58,24 +53,20 @@ const Navbar = () => {
               className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
               onClick={() => navigate("/products")}
             >
-              <li className=" text-white cursor-pointer text-[20px]">
-                Products
-              </li>
+              <li className=" text-white cursor-pointer text-[20px]">Products</li>
             </div>
             <div
               className="px-[28px] max-xmd:px-[23px] max-xmd:h-[34px] max-xmd:py-[5px] py-[9px] hover:bg-[#556f64] hover:cursor-pointer flex items-center rounded-full text-center"
               onClick={() => navigate("/contact-us")}
             >
-              <li className=" text-white cursor-pointer text-[20px]">
-                Contact Us
-              </li>
+              <li className=" text-white cursor-pointer text-[20px]">Contact Us</li>
             </div>
           </ul>
 
           {/* Explore Button */}
           <button
             onClick={() => navigate("/products")}
-            className="bg-[#10251F] max-xmd:text-[20px] font-raleway max-zmd:hidden flex w-[184px] h-[50px] justify-center items-center text-[#ece6d1] px-[46px] py-[17px] rounded-[81px] text-[20px] leading-[120%]"
+            className="bg-[#0F4034] max-xmd:text-[20px] font-raleway max-zmd:hidden flex w-[184px] h-[50px] justify-center items-center text-[#ece6d1] px-[46px] py-[17px] rounded-[81px] text-[20px] leading-[120%]"
           >
             EXPLORE
           </button>

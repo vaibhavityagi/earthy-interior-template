@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import image1 from "../../assets/HomePage/col1.png";
-import image2 from "../../assets/HomePage/Rectangle-16.png";
-import image3 from "../../assets/HomePage/Rectangle-17.png";
-import trendy from "../../assets/HomePage/col2.png";
-import aes from "../../assets/HomePage/col3.png";
+import image1 from "../../assets/HomePage/collection_1.png";
+import trendy from "../../assets/HomePage/collection_2.png";
+import aes from "../../assets/HomePage/collection_3.png";
 
 const Collection = () => {
   const [hovered, setHovered] = useState(null);
@@ -21,17 +19,15 @@ const Collection = () => {
         {/* <div className="w-full bg-red-900  max-w-[40.6%] flex flex-col gap-[36px] max-md:gap-[0]  justify-between  max-md:items-center max-sm:max-w-full max-sm:pr-[20px] max-md:pr-[40px] max-md:max-w-full max-xmd:max-w-[41.7%] max-md:flex-row "> */}
         <div className="w-full  max-w-[557px] flex flex-col gap-[36px] max-md:gap-[0]  justify-between  max-md:items-center max-sm:max-w-full max-sm:pr-[20px] max-md:pr-[40px] max-md:max-w-full max-xmd:max-w-[41.7%] max-md:flex-row ">
           <h1 className="text-[64px] font-bold  font-raleway text-left leading-[120%] max-md:text-[40px] max-xmd:text-[48px] max-sm:text-[24px]">
-            Elevating Spaces with{" "}
-            <span className="text-[#214A3E] italic">Eco-Friendly</span> Elegance
+            Elevating Spaces with Nature-Driven Craft <span className="text-[#214A3E] italic">Eco-Friendly</span>{" "}
+            Elegance
           </h1>
           <p className="text-[#758195] text-left max-534px:hidden font-raleway text-[20px] leading-[120%] max-xmd:text-[15px] max-xmd:max-w-[406px] max-sm:text-[12px] max-md:max-w-[301px] max-sm:max-w-[153px] max-md:text-right">
-            Our innovative finishes, from polished plasters to limewash, combine
-            luxury and sustainability, delivering beauty, durability, and
-            healthier environments for interiors and exteriors.
+            Our clay and lime finishes blend modern elegance with natural warmth. Each surface is hand-troweled to
+            create depth, purity, and a calm visual harmony for interiors and exteriors.{" "}
           </p>
           <p className="text-[#758195] hidden max-534px:block text-left font-raleway text-[20px] leading-[120%] max-xmd:text-[15px] max-sm:text-[12px] max-md:max-w-[301px] max-sm:max-w-[153px] max-md:text-right">
-            Our innovative finishes, from polished plasters to limewash, combine
-            luxury and sustainability.
+            Our innovative finishes, from polished plasters to limewash, combine luxury and sustainability.
           </p>
 
           {/* Button for Large Screens */}
@@ -52,9 +48,7 @@ const Collection = () => {
         <div className="flex w-full h-[592px] gap-[32px] pr-[10px] max-md:gap-[27px] max-sm:gap-[13px]">
           <div
             className={`relative flex-shrink ${
-              hovered === "second" || hovered === "third"
-                ? "w-[25%] pl-[10px]"
-                : "w-[50%] h-full"
+              hovered === "second" || hovered === "third" ? "w-[25%] pl-[10px]" : "w-[50%] h-full"
             } transform transition-width duration-700 ease-out rounded-[20px]`}
             style={{
               backgroundImage: `url(${image1})`,
